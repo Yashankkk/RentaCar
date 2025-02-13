@@ -1,20 +1,9 @@
 import React from 'react'
-import "./Home.css"
+// import "./Home.css"
 
 const Contact = () => {
   return (
     <div>    
-        <div className='div'>
-            <header class="header">
-                <a href="#" class="logo">RideEase</a>
-                <nav class="navbar">
-                    <a href="home.html">Home</a>
-                    <a href="blog.html">Blogs</a>
-                    <a href="#">Contact</a>
-                    <a href="about.html">About Us</a>
-                </nav>
-            </header>
-        </div>
         <div className='head'>
             <h1><center>Get in Touch</center></h1>
         </div>
