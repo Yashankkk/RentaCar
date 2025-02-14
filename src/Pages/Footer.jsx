@@ -6,6 +6,7 @@ import {
   EnvironmentOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
+import "@fontsource/poppins";
 
 const FooterLinks = [
   { title: "Home", link: "#" },
@@ -17,7 +18,7 @@ const FooterLinks = [
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 mt-14 rounded-t-3xl">
-      <div className="container mx-auto !px-6 !py-10">
+      <div className="container mx-auto !px-6 !py-10" style={{ fontFamily: "Poppins, sans-serif" }}>
         <div className="flex flex-cols-1 md:flex-cols-3 gap-8 justify-between">
           
           {/* Company Details */}
