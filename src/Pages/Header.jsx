@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { MenuOutlined, CloseOutlined, CarOutlined } from "@ant-design/icons"; // Ant Design icons
+import { MenuOutlined, CloseOutlined, HomeOutlined, PhoneOutlined, 
+  CarOutlined, UserOutlined, UserAddOutlined, InfoCircleOutlined} 
+from "@ant-design/icons"; // Ant Design icons
 import "@fontsource/poppins";
 import car from "../assets/car.png";
 
@@ -15,18 +17,18 @@ const Header = () => {
         </div>
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-10 space-x-6 text-lg">
-          <p className="hover:text-blue-300 cursor-pointer">Home</p>
-          <p className="hover:text-blue-300 cursor-pointer">About</p>
-          <p className="hover:text-blue-300 cursor-pointer">Cars</p>
-          <p className="hover:text-blue-300 cursor-pointer">Contact</p>
+          <p className="hover:text-blue-600 cursor-pointer"><HomeOutlined />Home</p>
+          <p className="hover:text-blue-600 cursor-pointer"><InfoCircleOutlined />About</p>
+          <p className="hover:text-blue-600 cursor-pointer"><CarOutlined />Cars</p>
+          <p className="hover:text-blue-600 cursor-pointer"><PhoneOutlined />Contact</p>
         </nav>
 
         {/* Right Side - Buttons */}
         <div className="hidden md:flex gap-8 space-x-4">
-          <button className="border border-black !px-4 py-2 rounded-lg hover:bg-gray-300 hover:text-blue-600 transition">
+          <button className="border border-black !px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white-600 hover:text-white hover:font-semibold"><UserAddOutlined />
             Sign Up
           </button>
-          <button className="border border-black !px-4 py-2 rounded-lg hover:bg-gray-300 hover:text-blue-600 transition">
+          <button className="border border-black !px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white hover:font-semibold"><UserOutlined />
             Login
           </button>
         </div>
