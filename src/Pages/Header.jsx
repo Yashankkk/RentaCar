@@ -13,10 +13,10 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center !p-4 md:p-6" style={{ fontFamily: "Poppins, sans-serif" }}>
         <div className="flex justify-between">
         <img src={car} alt="" className="h-30 w-30"/>
-        <span className="!pt-11 text-2xl bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"><b>RideEase</b></span>
+        <span className="!pt-11 text-2xl bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text font-serif text-transparent"><b>RideEase</b></span>
         </div>
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-10 space-x-6 text-lg">
+        <nav className="hidden md:flex gap-15 space-x-6 text-lg">
           <p className="hover:text-blue-600 cursor-pointer"><HomeOutlined />Home</p>
           <p className="hover:text-blue-600 cursor-pointer"><InfoCircleOutlined />About</p>
           <p className="hover:text-blue-600 cursor-pointer"><CarOutlined />Cars</p>
@@ -25,12 +25,14 @@ const Header = () => {
 
         {/* Right Side - Buttons */}
         <div className="hidden md:flex gap-8 space-x-4">
-          <button className="border border-black !px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white-600 hover:text-white hover:font-semibold"><UserAddOutlined />
-            Sign Up
-          </button>
-          <button className="border border-black !px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white hover:font-semibold"><UserOutlined />
-            Login
-          </button>
+        <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 
+            !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg"><UserAddOutlined />
+        Sign Up
+        </button>
+        <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 
+            !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg"><UserOutlined />
+        Login
+        </button>
         </div>
 
         {/* Mobile Menu Toggle */}

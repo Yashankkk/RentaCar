@@ -1,6 +1,8 @@
 import React from 'react'
 import "@fontsource/poppins";
 import{FileSearchOutlined, PhoneOutlined, DollarOutlined} from "@ant-design/icons";
+import { Car, Fuel, Users, Calendar } from 'lucide-react';
+import { Button } from "antd";
 
 const Home = () => {
   return (
@@ -14,8 +16,8 @@ const Home = () => {
           <div className='order-2 sm:order-1'>
             <h1 className='text-4xl lg:text-6xl font-semibold font-serif'>Car Rental</h1><br />
             <p className=''>Find your perfect rental car today.</p><br />
-            <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white py-3 
-            px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 
+            !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
               Get Started
             </button>
           </div>
@@ -48,7 +50,7 @@ const Home = () => {
           <h1 className='text-3xl font-semibold text-center font-serif sm:text-4xl'>Why Choose Us</h1>
         </div>
         <div className='grid grid-col-3 sm:grid-cols-2 md:grid-cols-3 gap-8'>
-          <div className='card shadow-lg rounded-lg bg-[black] hover:bg-gradient-to-r from-blue-500 to-purple-700'>
+          <div className='card shadow-lg rounded-lg bg-[black] hover:bg-gradient-to-r from-blue-500 to-purple-700 transform transition-all duration-300 hover:scale-105'>
             <div className='card-body'>
               <h1 className='text-center text-5xl text-white !pt-10'><FileSearchOutlined /></h1>
               <br /><br />
@@ -57,7 +59,7 @@ const Home = () => {
                   heading to an event, or planning a long trip, our intuitive and user-friendly platform ensures a seamless booking experience.</p> 
             </div>
           </div>
-          <div className='card shadow-lg rounded-lg bg-[black] hover:bg-gradient-to-r from-blue-500 to-purple-700'>
+          <div className='card shadow-lg rounded-lg bg-[black] hover:bg-gradient-to-r from-blue-500 to-purple-700 transform transition-all duration-300 hover:scale-105'>
             <div className='card-body'>
             <h1 className='text-center text-5xl text-white !pt-10'><DollarOutlined /></h1>
             <br /><br />
@@ -66,7 +68,7 @@ const Home = () => {
                 Our transparent pricing ensures you get the best value for your money, with no hidden fees or surprises.</p>
             </div>
           </div>
-          <div className='card shadow-lg rounded-lg bg-[black] hover:bg-gradient-to-r from-blue-500 to-purple-700'>
+          <div className='card shadow-lg rounded-lg bg-[black] hover:bg-gradient-to-r from-blue-500 to-purple-700 transform transition-all duration-300 hover:scale-105'>
               <div className='card-body'>
                 <h1 className='text-center text-5xl text-[white] !pt-10'><PhoneOutlined /></h1>
                 <br /><br />
@@ -79,8 +81,63 @@ const Home = () => {
       </div>
     </div>
 
+    <div className='!py-14 sm:min-h-[620px] sm:place-items-center !ml-30'>
+      <div className='container'>
+        <div className='!pb-12'>
+          <h1 className='text-3xl font-semibold text-center font-serif sm:text-4xl'>We Have Everthing you Need</h1>
+        </div>
+        <div className='grid grid-col-3 sm:grid-cols-2 md:grid-cols-3 gap-8'>
+          <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105'>
+            <div className='card-body'>
+              <img src="src\assets\scorpio.jpeg" alt="scorpio" className='rounded-lg'/>
+              <br /><br />
+              <h1 className='text-lg !p-3'>Mahindra Scorpio</h1>
+              <p className='!p-3 text-blue-500 text-xl'>$149<span className='text-[grey] text-sm'>/day</span></p> 
+              <div className="grid grid-cols-2 gap-3">
+            <div className="flex items-center gap-2 text-gray-600">
+              <Users size={20} />
+              <span> Seats</span>
+            </div>
+            <div className="flex items-center gap-2 text-gray-600">
+              <Fuel size={20} />
+              <span>Diesel</span>
+            </div>
+            <div className="flex items-center gap-2 text-gray-600">
+              <Calendar size={20} />
+              <span>2024</span>
+            </div>
+            <div className="flex items-center gap-2 text-gray-600">
+              <Car size={20} />
+              <span>Automatic</span>
+            </div>
+          </div>
+          <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
+          Rent Now
+          </Button>
+          </div>
+          </div>
+          <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105'>
+            <div className='card-body'>
+            <img src="src\assets\Alto.jpg" alt="swift" className='rounded-lg h-82 w-full'/>
+            <br /><br />
+              <h1 className='text-lg !p-3'>Lord Alto </h1>
+              <p className='!p-3 text-blue-500 text-xl'>$69<span className='text-[grey] text-sm'>/day</span></p>
+            </div>
+          </div>
+          <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105'>
+              <div className='card-body'>
+                <img src="src\assets\virtus.jpg" alt="virtus" className='rounded-lg'/>
+                <br /><br />
+                <h1 className='text-lg !p-3'>VW Virtus GT</h1>
+                <p className='!p-3 text-blue-500 text-xl'>$99<span className='text-[grey] text-sm'>/day</span></p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </div>
   )
-}
+};
 
 export default Home
