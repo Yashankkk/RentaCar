@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className='relative z-40 !p-8 gap-8' style={{ fontFamily: "Poppins, sans-serif" }}>
 
-      <div className='container min-h-[620px] flex shadow-lg !ml-15'>
+      <div className='container min-h-[620px] flex !ml-15'>
         <div className='grid place-items-center grid-cols-1 sm:grid-cols-2'>
           <div className='order-1 sm:order-2 !ml-30'>
             <img className='relative -z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto' src="src\assets\blue.png" alt="" />
@@ -16,7 +16,7 @@ const Home = () => {
           <div className='order-2 sm:order-1'>
             <h1 className='text-4xl lg:text-6xl font-semibold font-serif'>Car Rental</h1><br />
             <p className=''>Find your perfect rental car today.</p><br />
-            <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 
+            <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 cursor-pointer 
             !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
               Get Started
             </button>
@@ -25,15 +25,15 @@ const Home = () => {
       </div>
       <br />
       <br />
-    <div className='bg-gray !p-8 gap-8 !pt-10 shadow-lg'>
+    <div className='bg-gray !p-8 gap-8 !pt-10 space-y-0 w-full shadow-lg'>
       <div className='container flex'>
         <div className='grid grid-cols-1 sm:grid-cols-2'>
           <div className='order-1 md:px-8 sm:order-2 !ml-30'>
-            <h1 className='text-lg md:text-xl lg:text-2xl font-bold text-blue-500'>About Us</h1><br />
+            <h1 className='text-lg md:text-xl lg:text-2xl font-bold font-serif text-blue-500'>About Us</h1><br />
             <p className='text-sm md:text-base lg:text-lg !mt-2'>At RideEase, we believe in making transportation seamless, efficient, and reliable. 
               Whether you're commuting daily, planning a long trip, or simply looking for a convenient ride, RideEase is your go-to solution for hassle-free travel.
             </p><br />
-            <h1 className='text-lg md:text-xl lg:text-2xl font-bold text-blue-500 mt-6'>Our Mission</h1><br />
+            <h1 className='text-lg md:text-xl lg:text-2xl font-bold font-serif text-blue-500 mt-6'>Our Mission</h1><br />
             <p className='text-sm md:text-base lg:text-lg !mt-2'>Our mission is to revolutionize the way people move by providing a smart, user-friendly, and safe ride-booking experience. 
               We aim to connect passengers with reliable drivers, ensuring affordability, comfort, and punctuality every time you ride.</p>
           </div>
@@ -94,48 +94,109 @@ const Home = () => {
               <h1 className='text-lg !p-3'>Mahindra Scorpio</h1>
               <p className='!p-3 text-blue-500 text-xl'>$149<span className='text-[grey] text-sm'>/day</span></p> 
               <div className="grid grid-cols-2 gap-3">
-            <div className="flex items-center gap-2 text-gray-600">
-              <Users size={20} />
-              <span> Seats</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <Fuel size={20} />
-              <span>Diesel</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <Calendar size={20} />
-              <span>2024</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <Car size={20} />
-              <span>Automatic</span>
-            </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Users size={20} />
+                  <span> Seats</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Fuel size={20} />
+                  <span>Diesel</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Calendar size={20} />
+                  <span>2024</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Car size={20} />
+                  <span>Automatic</span>
+                </div>
+              </div>
+              <br />
+                <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
+                Rent Now
+                </Button>
+              </div>
           </div>
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
-          Rent Now
-          </Button>
-          </div>
-          </div>
+
           <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105'>
             <div className='card-body'>
-            <img src="src\assets\Alto.jpg" alt="swift" className='rounded-lg h-82 w-full'/>
+            <img src="src\assets\Alto.jpg" alt="alto" className='rounded-lg h-82 w-full'/>
             <br /><br />
               <h1 className='text-lg !p-3'>Lord Alto </h1>
               <p className='!p-3 text-blue-500 text-xl'>$69<span className='text-[grey] text-sm'>/day</span></p>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Users size={20} />
+                  <span> Seats</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Fuel size={20} />
+                  <span>Diesel</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Calendar size={20} />
+                  <span>2024</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Car size={20} />
+                  <span>Automatic</span>
+                </div>
+              </div>
+              <br />
+                <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
+                Rent Now
+                </Button>
             </div>
           </div>
+
           <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105'>
               <div className='card-body'>
                 <img src="src\assets\virtus.jpg" alt="virtus" className='rounded-lg'/>
                 <br /><br />
-                <h1 className='text-lg !p-3'>VW Virtus GT</h1>
+                <h1 className='text-lg !p-3'>Virtus GT</h1>
                 <p className='!p-3 text-blue-500 text-xl'>$99<span className='text-[grey] text-sm'>/day</span></p>
+                <div className="grid grid-cols-2 gap-3">
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Users size={20} />
+                  <span> Seats</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Fuel size={20} />
+                  <span>Diesel</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Calendar size={20} />
+                  <span>2024</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Car size={20} />
+                  <span>Automatic</span>
+                </div>
+              </div>
+              <br />
+                <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
+                Rent Now
+                </Button>
               </div>
           </div>
         </div>
+        <br />
+        <center><button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 cursor-pointer
+        !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
+          Get Started
+        </button></center>
       </div>
     </div>
-
+    <br />
+    <div className='relative'>
+      <img src="src\assets\driving.jpg" className='w-full h-170 object-cover' alt="driving" />
+      <div className='absolute inset-0 flex flex-col items-center justify-center bg-black/50'>
+        <h1 className='text-white text-4xl font-bold font-serif !mb-4'>Economics of renting a car vs owning one</h1><br />
+        <button className='text-white bg-blue-600 cursor-pointer hover:bg-blue-700 font-semibold !py-2 !px-4 rounded-full 
+        transform transition-all duration-300 hover:scale-105 active:scale-95'>Discover More</button>
+      </div>
+    </div>
+    
     </div>
   )
 };
