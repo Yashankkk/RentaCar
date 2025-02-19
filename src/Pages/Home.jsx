@@ -196,7 +196,46 @@ const Home = () => {
         transform transition-all duration-300 hover:scale-105 active:scale-95'>Discover More</button>
       </div>
     </div>
-    
+    <br />
+    <div className='!py-14 sm:min-h-[620px] sm:place-items-center !ml-30'>
+      <div className='container'>
+        <div className='!pb-12'>
+          <h1 className='text-3xl font-semibold text-center font-serif sm:text-4xl'>What Our Clients Say About Us</h1>
+        </div>
+        <div className='grid grid-col-3 sm:grid-cols-2 md:grid-cols-3 gap-8'>
+          <div className='card shadow-lg rounded-lg bg-[#dedcdc] text-center group space-y-3 !p-4 transform transition-all duration-300 hover:scale-105'>
+            <div className='grid place-items-center'>
+              <img className='h-20 w-20 rounded-full' src="src\assets\john.jpg" alt="" />
+              <p className='text-black text-xl'>John Doe</p>
+              <br /><br />
+              <h1 className='text-lg !pt-5 text-center font-bold text-yellow'>⭐⭐⭐⭐⭐</h1>
+              <p className='!p-5 !m-3'>"Absolutely amazing service! The car was in perfect condition and the rental process was smooth and hassle-free. 
+                Would definitely recommend to anyone looking for a reliable car rental service."</p> 
+            </div>
+          </div>
+          <div className='card shadow-lg rounded-lg bg-[#dedcdc] text-center group space-y-3 !p-4 transform transition-all duration-300 hover:scale-105'>
+            <div className='grid place-items-center'>
+              <img className='h-20 w-20 rounded-full' src="src\assets\sarah.avif" alt="" />
+              <p className='text-black text-xl'>Sarah Johnson</p>
+              <br /><br />
+              <h1 className='text-lg !pt-5 text-center font-bold text-yellow'>⭐⭐⭐⭐⭐</h1>
+              <p className='!p-5 !m-3'>"Great experience overall. The car was clean and well-maintained. The staff was professional and helpful. 
+                Only minor issue was a slight delay during pickup, but everything else was perfect."</p> 
+            </div>
+          </div>
+          <div className='card shadow-lg rounded-lg bg-[#dedcdc] text-center group space-y-3 !p-4 transform transition-all duration-300 hover:scale-105'>
+            <div className='grid place-items-center'>
+              <img className='h-20 w-20 rounded-full' src="src\assets\emma.avif" alt="" />
+              <p className='text-black text-xl'>Emma Williams</p>
+              <br /><br />
+              <h1 className='text-lg !pt-5 text-center font-bold text-yellow'>⭐⭐⭐⭐⭐</h1>
+              <p className='!p-5 !m-3'>"Outstanding customer service! They went above and beyond to accommodate my specific requirements. 
+                The vehicle exceeded my expectations and made my trip so much more enjoyable."</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   )
 };

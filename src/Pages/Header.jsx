@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MenuOutlined, CloseOutlined, HomeOutlined, PhoneOutlined, 
-  CarOutlined, UserOutlined, UserAddOutlined, InfoCircleOutlined} 
-from "@ant-design/icons"; // Ant Design icons
+  CarOutlined, UserOutlined, UserAddOutlined, InfoCircleOutlined, FileSearchOutlined} 
+from "@ant-design/icons"; 
 import "@fontsource/poppins";
 import car from "../assets/car.png";
 
@@ -19,6 +19,7 @@ const Header = () => {
         <nav className="hidden md:flex gap-15 space-x-6 text-lg">
           <p className="hover:text-blue-600 cursor-pointer"><HomeOutlined />Home</p>
           <p className="hover:text-blue-600 cursor-pointer"><InfoCircleOutlined />About</p>
+          <p className="hover:text-blue-600 cursor-pointer"><FileSearchOutlined />News</p>
           <p className="hover:text-blue-600 cursor-pointer"><CarOutlined />Cars</p>
           <p className="hover:text-blue-600 cursor-pointer"><PhoneOutlined />Contact</p>
         </nav>
