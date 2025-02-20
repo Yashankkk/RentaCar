@@ -12,18 +12,16 @@ import Footer from './Pages/Footer.jsx';
 
 createRoot(document.getElementById('root')).render(
   <div>
-    <Header />
     <BrowserRouter>
+    <Header />
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="login" element={<Login/>} />
-      <Route path="home" element={<Home/>} />  
-      <Route path="about" element={<About/>} />
-      <Route path="contact" element={<Contact/>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/home" element={<Home/>} />  
+      <Route path="/about" element={<About/>} />
+      <Route path="/contact" element={<Contact/>} />
     </Routes>
-    </BrowserRouter>
     <Footer />
+    </BrowserRouter>
   </div>
-  
-
 )
