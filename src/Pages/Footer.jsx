@@ -17,13 +17,13 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-800 mt-14 rounded-t-3xl">
+    <footer className="bg-[#02084d] text-gray-300 !mt-14 ">
       <div className="container mx-auto !px-6 !py-10" style={{ fontFamily: "Poppins, sans-serif" }}>
         <div className="flex flex-cols-1 md:flex-cols-3 gap-8 justify-between">
           
           {/* Company Details */}
           <div>
-            <h1 className="text-2xl font-bold mb-3">RideEase</h1>
+            <h1 className="text-2xl font-bold font-serif mb-3">RideEase</h1>
             <p className="text-sm mb-4">
               Experience the best car rental services with top-notch vehicles and seamless booking.
             </p>
@@ -52,7 +52,7 @@ const Footer = () => {
           {/* Footer Links Section */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10 ">
             <div>
-              <h2 className="text-xl font-semibold mb-3">Important Links</h2>
+              <h2 className="text-xl font-semibold font-serif mb-3">Important Links</h2>
               <ul className="space-y-2">
                 {FooterLinks.map((link, index) => (
                   <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
@@ -62,7 +62,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-3">Quick Links</h2>
+              <h2 className="text-xl font-semibold font-serif mb-3">Quick Links</h2>
               <ul className="space-y-2">
                 {FooterLinks.map((link, index) => (
                   <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
@@ -72,7 +72,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-3">Our Services</h2>
+              <h2 className="text-xl font-semibold font-serif mb-3">Our Services</h2>
               <ul className="space-y-2">
                 {["Car Hire", "Luxury Cars", "Self-Drive", "Chauffeur Service"].map((service, index) => (
                   <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
