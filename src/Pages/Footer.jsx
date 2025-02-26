@@ -17,26 +17,26 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#02084d] text-gray-300 !mt-14 ">
+    <footer className="bg-[#02084d] text-gray-300 ">
       <div className="container mx-auto !px-6 !py-10" style={{ fontFamily: "Poppins, sans-serif" }}>
-        <div className="flex flex-cols-1 md:flex-cols-3 gap-8 justify-between">
+        <div className="flex flex-cols-1 md:flex-cols-3 gap-8 justify-between md:text-left">
           
           {/* Company Details */}
-          <div>
-            <h1 className="text-2xl font-bold font-serif mb-3">RideEase</h1>
-            <p className="text-sm mb-4">
+          <div className="w-full md:w-1/3">
+            <h1 className="text-2xl font-bold font-serif !mb-3">RideEase</h1>
+            <p className="text-sm !mb-4">
               Experience the best car rental services with top-notch vehicles and seamless booking.
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex justify-center md:justify-start items-center gap-2">
               <EnvironmentOutlined className="text-xl" />
               <p>Noida, Uttar Pradesh</p>
             </div>
-            <div className="flex items-center gap-2 mt-3">
+            <div className="flex justify-center md:justify-start items-center gap-2 !mt-3">
               <PhoneOutlined className="text-xl" />
               <p>+91 123456789</p>
             </div>
             {/* Social Media Links */}
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex justify-center md:justify-start items-center gap-4 !mt-6">
               <a href="#" className="text-2xl hover:text-red-500">
                 <InstagramOutlined />
               </a>
@@ -50,9 +50,9 @@ const Footer = () => {
           </div>
 
           {/* Footer Links Section */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 ">
+          <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-10 ">
             <div>
-              <h2 className="text-xl font-semibold font-serif mb-3">Important Links</h2>
+              <h2 className="text-xl font-semibold font-serif !mb-3">Important Links</h2>
               <ul className="space-y-2">
                 {FooterLinks.map((link, index) => (
                   <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
@@ -62,7 +62,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-semibold font-serif mb-3">Quick Links</h2>
+              <h2 className="text-xl font-semibold font-serif !mb-3">Quick Links</h2>
               <ul className="space-y-2">
                 {FooterLinks.map((link, index) => (
                   <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
@@ -72,7 +72,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-semibold font-serif mb-3">Our Services</h2>
+              <h2 className="text-xl font-semibold font-serif !mb-3">Our Services</h2>
               <ul className="space-y-2">
                 {["Car Hire", "Luxury Cars", "Self-Drive", "Chauffeur Service"].map((service, index) => (
                   <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-center mt-10 border-t border-gray-500 !pt-6">
+        <div className="text-center !mt-10 border-t border-gray-500 !pt-6">
           <p>&copy; {new Date().getFullYear()} Car Rental. All rights reserved.</p>
         </div>
       </div>

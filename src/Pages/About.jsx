@@ -22,7 +22,7 @@ const about = () => {
       </div>
     </div>
     <br />
-    <div className='relative'>
+    <div className='relative !mt-10'>
       <img src="src\assets\driving.jpg" className='w-full h-170 object-cover' alt="driving" />
       <div className='absolute inset-0 flex flex-col items-center justify-center bg-black/50'>
         <h1 className='text-white text-4xl font-bold font-serif !mb-4'>Economics of renting a car vs owning one</h1><br />
