@@ -13,11 +13,11 @@ const Home = () => {
     }, []);
 
   return (
-    <div className='relative z-40 !p-8 gap-8' style={{ fontFamily: "Poppins, sans-serif" }}>
+    <div className='relative z-40 !p-8 gap-8' style={{ fontFamily: "Poppins, sans-serif" }} >
 
       <div className='container min-h-[620px] flex !ml-15'>
         <div className='grid place-items-center grid-cols-1 sm:grid-cols-2'>
-          <div className='order-1 sm:order-2 !ml-30 ' data-aos="fade-up">
+          <div className='order-1 sm:order-2 !ml-30 ' data-aos="fade-left">
             <img className='relative -z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto' src="src\assets\blue.png" alt="" />
           </div>
           <div className='order-2 sm:order-1' data-aos="fade-right">
