@@ -18,19 +18,19 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-15 space-x-6 text-lg ">
           <NavLink to="/home">
-          <p className="hover:text-blue-600 cursor-pointer"><HomeOutlined />Home</p>
+          <p className="hover:text-blue-600 cursor-pointer"><HomeOutlined /> Home</p>
           </NavLink>
           <NavLink to="/about">
-          <p className="hover:text-blue-600 cursor-pointer"><InfoCircleOutlined />About</p>
+          <p className="hover:text-blue-600 cursor-pointer"><InfoCircleOutlined /> About</p>
           </NavLink>
           <NavLink>
-          <p className="hover:text-blue-600 cursor-pointer"><FileSearchOutlined />News</p>
+          <p className="hover:text-blue-600 cursor-pointer"><FileSearchOutlined /> News</p>
           </NavLink>
           <NavLink>
-          <p className="hover:text-blue-600 cursor-pointer"><CarOutlined />Cars</p>
+          <p className="hover:text-blue-600 cursor-pointer"><CarOutlined /> Cars</p>
           </NavLink>
           <NavLink to="contact">
-          <p className="hover:text-blue-600 cursor-pointer"><PhoneOutlined />Contact</p>
+          <p className="hover:text-blue-600 cursor-pointer"><PhoneOutlined /> Contact</p>
           </NavLink>
         </nav>
 

@@ -7,12 +7,13 @@ import {
   PhoneOutlined,
 } from "@ant-design/icons";
 import "@fontsource/poppins";
+import { NavLink } from "react-router";
 
 const FooterLinks = [
-  { title: "Home", link: "#" },
-  { title: "About", link: "/#about" },
-  { title: "Contact", link: "/#contact" },
-  { title: "Blog", link: "/#blog" },
+  { title: "Home", link: "/home" },
+  { title: "About", link: "/about" },
+  { title: "Contact", link: "/contact" },
+  { title: "Blog", link: "/blog" },
 ];
 
 const Footer = () => {
