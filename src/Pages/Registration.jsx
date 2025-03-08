@@ -3,21 +3,18 @@ import { Form, Input, Button, Row, Col, Typography, } from 'antd';
 import { UserOutlined, MailOutlined, PhoneOutlined, LockOutlined } from '@ant-design/icons';
 
 const RegistrationForm = () => {
-  const [form] = Form.useForm();
-
-  const onFinish = (values) => {
-    console.log('Received values:', values);
-    // Here you would typically send the form data to your backend
+  const onFinish = async (values) => {
+    console.log('Received values of form: ', values);
+    try{
+      const res = await axios.post("http://localhost:3000/api/auth/login",values)
+      console.log("Registration Success:", res.data);
+    } 
+    catch (error) {
+      console.error("Registration Failed:", error.response?.data || error.message);
+    }
+  
   };
 
-  const validatePassword = ({ getFieldValue }) => ({
-    validator(_, value) {
-      if (!value || getFieldValue('password') === value) {
-        return Promise.resolve();
-      }
-      return Promise.reject(new Error('The two passwords do not match'));
-    },
-  });
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px'}} className='!mt-20 !mb-20'>

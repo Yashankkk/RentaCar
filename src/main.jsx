@@ -7,9 +7,10 @@ import Login from './Pages/Login.jsx';
 import Home from './Pages/Home.jsx';
 import About from './Pages/About.jsx'
 import Contact from './Pages/Contact.jsx';
-import Header from './Pages/Header.jsx';
-import Footer from './Pages/Footer.jsx';
+import Header from './Components/Header.jsx';
+import Footer from './Components/Footer.jsx';
 import Registration from './Pages/Registration.jsx';
+import Sidebar from './Pages/Sidebar.jsx';
 
 createRoot(document.getElementById('root')).render(
   <div>
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/about" element={<About/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/registration" element={<Registration/>} />
+      <Route path="/sidebar" element={<Sidebar/>} />
     </Routes>
     <Footer />
     </BrowserRouter>

@@ -1,21 +1,30 @@
 import React from 'react'
 import { Button, Checkbox, Form, Input } from 'antd';
 import { NavLink } from "react-router";
+import axios from 'axios';
 
-const onFinish = (values) => {
-  console.log('Login:', values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log('Failed:', errorInfo);
-};
-const login = () => {
+const Login = () => {
+  const onFinish = async (values) => {
+    console.log('Received values of form: ', values);
+    try{
+      const res = await axios.post("http://localhost:3000/api/auth/login",values)
+      console.log("Login Success:", res.data);
+    } 
+    catch (error) {
+      console.error("Login Failed:", error.response?.data || error.message);
+    }
+  
+  };
+
   return (
     <div className='h-screen bg-[url("assets\hero_fpo.jpg")] flex flex-col justify-center items-center bg-cover opacity-90 bg-center bg-no-repeat'>
       <div className='!p-10 bg-white md:!p-10 rounded-sm shadow-xl w-full max-w-md'>
       <h1 className='font-serif text-center text-4xl md:text-5xl'>Login</h1>
+      <br />
       <p className='text-center mt-2 text-sm md:text-base'>doesn't have an account? <NavLink to="/Registration"><span className='text-blue-800 underline !ml-1'>Sign Up</span></ NavLink></p>
       <Form className='!mt-10'
       name="basic"
+      onFinish={onFinish}
       labelCol={{
         span: 8,
       }}
@@ -28,9 +37,6 @@ const login = () => {
       initialValues={{
         remember: true,
       }}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
       >
         <Form.Item
         label="Username"
@@ -79,4 +85,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login;
