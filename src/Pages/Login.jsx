@@ -1,14 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { NavLink } from "react-router";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 const Login = () => {
+  const [data,setData]=useState()
+  console.log("yeh ha mera data",data?.message)
+  const notify = () => toast.info("Login Successfull!");
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try{
       const res = await axios.post("http://localhost:3000/api/auth/login",values)
-      console.log("Login Success:", res.data);
+      .then((res)=>{
+        console.log("Login Successfull:", res.data);
+        setData(res.data)
+      })
     } 
     catch (error) {
       console.error("Login Failed:", error.response?.data || error.message);
@@ -74,15 +82,16 @@ const Login = () => {
             </div>
               
             <Form.Item label={null}>
-              <Button type="primary" htmlType="submit" className='!ml-8'>
+              <Button onClick={notify} type="primary" htmlType="submit" className='!ml-8' >
                 Submit
               </Button>
+              <ToastContainer />
             </Form.Item>
             
       </Form>
       </div>
     </div>
   )
-}
+};
 
 export default Login;

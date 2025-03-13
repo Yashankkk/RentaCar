@@ -1,20 +1,39 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Form, Input, Button, Row, Col, Typography, } from 'antd';
 import { UserOutlined, MailOutlined, PhoneOutlined, LockOutlined } from '@ant-design/icons';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
-const RegistrationForm = () => {
+const Registration = () => {
+  const [form] = Form.useForm();
+  const [data,setData]=useState()
+  console.log("yeh ha mera data",data?.message)
+  // const notify = () => toast.info(data?.message);
+  const notify = () => toast.info("User Registered Successfully");
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try{
-      const res = await axios.post("http://localhost:3000/api/auth/login",values)
-      console.log("Registration Success:", res.data);
+      const res = await axios.post("http://localhost:3000/api/auth/registration",values)
+      .then((response)=>{
+        console.log("Registration Successfull:", response.data);
+        setData(response.data)
+      })
+   
     } 
     catch (error) {
       console.error("Registration Failed:", error.response?.data || error.message);
     }
-  
   };
 
+  const validatePassword = ({ getFieldValue }) => ({
+    validator(_, value) {
+      if (!value || getFieldValue('password') === value) {
+        return Promise.resolve();
+      }
+      return Promise.reject(new Error('Passwords do not match!'));
+    },
+  });
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px'}} className='!mt-20 !mb-20'>
@@ -35,7 +54,7 @@ const RegistrationForm = () => {
           {/* First row with Name and Username */}
           <Col xs={24} sm={12}>
             <Form.Item
-              name="name"
+              name="fullName"
               label="Full Name"
               rules={[
                 {
@@ -140,16 +159,17 @@ const RegistrationForm = () => {
         </Row>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" style={{ width: '100%' }}>
+          <Button onClick={notify} type="primary" htmlType="submit" style={{ width: '100%' }} >
             Register
           </Button>
+          <ToastContainer />  
         </Form.Item>
       </Form>
     </div>
   );
 };
 
-export default RegistrationForm;
+export default Registration;
 
 // import React,{useState} from 'react'
 

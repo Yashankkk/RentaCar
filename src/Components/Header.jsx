@@ -9,7 +9,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg ">
+    <header className="bg-white w-full sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center !p-4 md:p-6 " style={{ fontFamily: "Poppins, sans-serif" }}>
         <div className="flex justify-between">
         <img src={car} alt="" className="h-30 w-30"/>
