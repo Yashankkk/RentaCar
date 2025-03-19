@@ -38,14 +38,14 @@ const Header = () => {
         <div className="hidden md:flex gap-8 space-x-4">
         <NavLink to="/registration">
         <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 
-            !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg"><UserAddOutlined />
+            !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg"><UserAddOutlined />
         Sign Up
         </button>
         </NavLink >
 
         <NavLink  to="/login">
         <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 cursor-pointer
-            !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg"><UserOutlined />
+            !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg"><UserOutlined />
         Login
         </button>
         </NavLink >
@@ -65,15 +65,15 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-white-700 p-4 space-y-4">
+        <nav className="md:hidden bg-white-700 !p-4 space-y-4">
           <p className="hover:text-blue-300 cursor-pointer">Home</p>
           <p className="hover:text-blue-300 cursor-pointer">About</p>
           <p className="hover:text-blue-300 cursor-pointer">Cars</p>
           <p className="hover:text-blue-300 cursor-pointer">Contact</p>
-          <button className="bg-white px-4 py-2 rounded-lg w-full mt-2">
+          <button className="bg-white !px-4 !py-2 rounded-lg w-full !mt-2">
             Sign Up
           </button>
-          <button className="border border-white px-4 py-2 rounded-lg w-full mt-2">
+          <button className="border border-white !px-4 !py-2 rounded-lg w-full !mt-2">
             Login
           </button>
         </nav>

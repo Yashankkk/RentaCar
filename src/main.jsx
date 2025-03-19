@@ -11,13 +11,26 @@ import Header from './Components/Header.jsx';
 import Footer from './Components/Footer.jsx';
 import Registration from './Pages/Registration.jsx';
 import Sidebar from './Pages/Sidebar.jsx';
+import GoogleLogin from './Pages/Googlelogin.jsx'
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
+const GoogleWrapper = () => {
+  return(
+    <GoogleOAuthProvider clientID="91414257084-ddh4oq3bfuhuf2vbrhqr3bnm7ak2eh7g.apps.googleusercontent.com ">
+    <GoogleLogin />
+  </GoogleOAuthProvider>
+  )
+ 
+}
 
 createRoot(document.getElementById('root')).render(
   <div>
     <BrowserRouter>
     <Header />
     <Routes>
-      <Route path="/" element={<App />} />
+    <Route path="/" element={<GoogleWrapper/>} />
+
+      <Route path="/app" element={<App />} />
       <Route path="/login" element={<Login/>} />
       <Route path="/home" element={<Home/>} />  
       <Route path="/about" element={<About/>} />
