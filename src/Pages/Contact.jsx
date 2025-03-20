@@ -1,13 +1,29 @@
-import React from "react";
+import React,{useState} from "react";
 import { Button, Form, Input, Row, Col } from "antd";
 import { Typography } from "antd";
 import { UserOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
+import axios from 'axios';
 
 const { TextArea } = Input; 
 
 const Contact = () => {
-  const onFinish = (values) => {
-    console.log("Form Submitted:", values);
+  const [form] = Form.useForm();
+  const [data,setData]=useState()
+  console.log("yeh ha mera data",data?.message)
+  
+  const onFinish = async(values) => {
+    console.log("Received values of form:", values);
+    try{
+      const response = await axios.post("http://localhost:3000/api/auth/contact", values) 
+      .then((response)=>{
+        console.log("Message sent Successfully!",response.data);
+        setData(response.data)
+      })
+
+    }
+    catch(error) {
+      console.error("Message failed to delievered",error);
+    }
   };
 
   return (
@@ -25,6 +41,7 @@ const Contact = () => {
           Feel free to connect with us through our online channels for updates, news, and more.
         </p>
         <Form
+          form={form}
           className="!mt-10"
           name="basic"
           layout="vertical"
@@ -87,4 +104,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact

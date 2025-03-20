@@ -14,7 +14,7 @@ const Registration = () => {
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try{
-      const res = await axios.post("http://localhost:3000/api/auth/registration",values)
+      const response = await axios.post("http://localhost:3000/api/auth/registration",values)
       .then((response)=>{
         console.log("Registration Successfull:", response.data);
         setData(response.data)
