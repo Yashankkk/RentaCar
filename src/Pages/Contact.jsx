@@ -14,7 +14,7 @@ const Contact = () => {
   const onFinish = async(values) => {
     console.log("Received values of form:", values);
     try{
-      const response = await axios.post("http://localhost:3000/api/auth/contact", values) 
+      await axios.post("http://localhost:3000/api/auth/contact", values) 
       .then((response)=>{
         console.log("Message sent Successfully!",response.data);
         setData(response.data)

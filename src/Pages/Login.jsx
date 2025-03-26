@@ -12,7 +12,7 @@ const Login = () => {
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try{
-      const res = await axios.post("http://localhost:3000/api/auth/login",values)
+      await axios.post("http://localhost:3000/api/auth/login",values)
       .then((res)=>{
         console.log("Login Successfull:", res.data);
         setData(res.data)
