@@ -4,6 +4,8 @@ import { UserOutlined, MailOutlined, PhoneOutlined, LockOutlined } from '@ant-de
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 const Registration = () => {
   const [form] = Form.useForm();
@@ -36,6 +38,8 @@ const Registration = () => {
   });
 
   return (
+    <div>
+      <Header />
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px'}} className='!mt-20 !mb-20'>
       <Typography.Title level={3} style={{ textAlign: 'left' }}>
       Don't have a account? Register Now
@@ -166,31 +170,9 @@ const Registration = () => {
         </Form.Item>
       </Form>
     </div>
+    <Footer />
+    </div>
   );
 };
 
 export default Registration;
-
-// import React,{useState} from 'react'
-
-
-// const Registration = () => {
-//     const array =[
-//         {name:"John",age:25},
-//         {name:"Anna",age:30},
-//         {name:"Peter",age:35}
-//     ]
-//     const [name, setName] = useState('')
-//     console.log(name?.[1]);
-
-//     const handle=()=>{
-//         setName(array)
-//     }
-//   return (
-//         {/* <button onClick={handle} className='cursor-pointer'>Click</button> */}
-
-//     </div>
-//   )
-// }
-
-// export default Registration

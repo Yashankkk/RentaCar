@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
     const [userInfo, setUserInfo] = useState(null);
+    console.log("use",userInfo)
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -20,7 +21,7 @@ const Dashboard = () => {
         <>
             <h1>Welcome {userInfo?.name}</h1>
             <h3>{userInfo?.email}</h3>
-            <img src={userInfo?.image} alt={userInfo?.name}/>
+            <img src={userInfo?.image} style={{width:200}} alt={userInfo?.name}/>
             <button onClick={handleLogout}
             >Logout
             </button>

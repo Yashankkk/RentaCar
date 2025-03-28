@@ -3,6 +3,8 @@ import { Button, Form, Input, Row, Col } from "antd";
 import { Typography } from "antd";
 import { UserOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
 import axios from 'axios';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 const { TextArea } = Input; 
 
@@ -27,7 +29,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="">
+    <div>
+      <Header />
       <div className="head">
         <h1 className="text-5xl !mt-5 font-lato">
           <center>Get in Touch</center>
@@ -100,6 +103,7 @@ const Contact = () => {
           </Form.Item>
         </Form>
       </div>
+      <Footer />
     </div>
   );
 };
