@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 
 import {
-
   PieChartOutlined,
   UserOutlined,
   MenuFoldOutlined,
@@ -44,12 +43,12 @@ function getItem(label, key, icon, children) {
 }
 const Dashitems = [
   getItem("Dashboard", "Dashboard", <PieChartOutlined />),
-  getItem("Registration", "Registration", <UserOutlined />),
-  getItem("Membership", "Membership", <SolutionOutlined />),
+  getItem("My Profile", "My Profile", <UserOutlined />),
+  getItem("Bookings", "Bookings", <SolutionOutlined />),
   getItem("Exampapers", "Exampapers", <FileOutlined />),
   
   // getItem("Quiz", "Quiz", <FormOutlined />),
-  getItem("Feedback", "Feedback", <MessageOutlined />),
+  getItem("Review", "Review", <MessageOutlined />),
   getItem("Report", "Report", <BlockOutlined />),
   getItem("Terms&Policy", "Terms&Policy", <LockOutlined />,
 
