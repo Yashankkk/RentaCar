@@ -32,7 +32,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Header /> */}
     <Routes>
     <Route path="/" element={<GoogleWrapper/>} />
-      <Route path="/login" element={<Login/>} />
+      {/* <Route path="/login" element={<Login/>} /> */}
       <Route path="/home" element={<Home/>} />  
       <Route path="/about" element={<About/>} />
       <Route path="/contact" element={<Contact/>} />
