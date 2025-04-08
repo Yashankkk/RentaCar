@@ -7,7 +7,7 @@ const instance = axios.create({
 
 instance.interceptors.request.use(async (config) => {
     try{
-        const token = localStorage.getItem('token');
+        const token ="hgjhgjhgjgjgh"
         if (!token) {
             throw new Error("Token not found");
         }
@@ -33,3 +33,4 @@ instance.interceptors.request.use(
 
 export default instance;
 
+ 

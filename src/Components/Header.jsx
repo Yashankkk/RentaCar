@@ -43,7 +43,7 @@ const Header = () => {
         </button>
         </NavLink >
 
-        <NavLink  to="/login">
+        <NavLink  to="/">
         <button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 cursor-pointer
             !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg"><UserOutlined />
         Login
@@ -83,7 +83,7 @@ const Header = () => {
             Sign Up
           </button>
           </NavLink>
-          <NavLink to="/login">
+          <NavLink to="/">
           <button className="border border-white !px-4 !py-2 rounded-lg w-full !mt-2 hover:text-blue-300 cursor-pointer">
             Login
           </button>

@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import car from '../assets/carr.png'
 import { NavLink } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
+import Dashboard from './Dashboard';
+import User from "../Components/User.jsx";
 
 import {
   PieChartOutlined,
@@ -29,8 +31,6 @@ import {
   Avatar,
 
 } from "antd";
-import User from "../Components/User.jsx";
-
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -59,13 +59,15 @@ const Dashitems = [
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [breadcrumb, setBreadcrumb] = useState(["Home"]);
-  const [currentPath, setCurrentPath] = useState("OnlineRegistration");
+  const [currentPath, setCurrentPath] = useState("Dashboard");
   console.log(currentPath)
   const [selectedItems, setSelectedItems] = useState([]);
 
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const navigate = useNavigate();
 
   const handleMenuClick = (item) => {
     console.log("ja baba di ",item);
@@ -74,8 +76,25 @@ const Sidebar = () => {
     setCurrentPath(newPath);
   };
 
+  const [user,setUser] = useState({});
+    useEffect(()=>{
+      const user = JSON.parse(localStorage.getItem("user"))
+      setUser(user);
+      console.log(user);
+    },[])
+    // Navigate to the corresponding route
+  //   if (item.key === "Dashboard") {
+  //     navigate("/dashboard");} 
+  //     else if (item.key === "My Profile") {
+  //     navigate("/profile");
+  //   } else if (item.key === "Bookings") {
+  //     navigate("/bookings");
+  //   }
+  //   setCurrentPath(item.key);
+  // };
+
   const handleLogout = () => {
-    localStorage.removeItem("user-info");
+    localStorage.removeItem("user");
   };
 
   const items = [
@@ -96,7 +115,7 @@ const Sidebar = () => {
       key: "2",
       danger: true,
       label: (
-      <NavLink to="/login" onClick={handleLogout} style={{ color: "red" }}>
+      <NavLink to="/" onClick={handleLogout} style={{ color: "red" }}>
         Log out
       </NavLink>
     ),
@@ -163,7 +182,7 @@ const Sidebar = () => {
             <a onClick={(e) => e.preventDefault()}>
               <Space>
                 <Avatar size="large" icon={<UserOutlined />} />
-                <p>YASH</p>
+                <p>{user?.username}</p>
 
                 <DownOutlined />
               </Space>
@@ -194,11 +213,12 @@ const Sidebar = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            {currentPath === "Dashboard" ? (
-              <p>Dashboard content</p>
-            ) : currentPath === "Registration" ? (
-              <User />
-            ):null}
+            {currentPath === "Dashboard" && <Dashboard />}
+            {currentPath === "My Profile" && <User /> }
+            {currentPath === "Bookings" &&<p>Booking details go here...</p> }
+            {currentPath === "Review" && <p>Review content go here...</p> }
+            {currentPath === "Report" && <p>Report details go here...</p> }
+            {currentPath === "Terms&Policy" && <p>Terms and Policy information...</p> }
           </div>
         </Content>
         <Footer

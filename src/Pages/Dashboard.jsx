@@ -1,31 +1,34 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+// import Calendar from 'react-calendar'
+
 
 const Dashboard = () => {
-    const [userInfo, setUserInfo] = useState(null);
-    console.log("use",userInfo)
+    const [user, setUser] = useState({});
+    useEffect(()=>{
+        const user = JSON.parse(localStorage.getItem('user'));
+        setUser(user);
+        console.log(user);
+    },[])
+    
     const navigate = useNavigate();
 
-    useEffect(()=>{
-        const data = localStorage.getItem('user-info');
-        const userData = JSON.parse(data);
-        setUserInfo(userData);
-    },[])
-
-    const handleLogout = ()=>{
-        localStorage.removeItem('user-info');
-        navigate('/login');
-    }
+    // const handleLogout = ()=>{
+    //     localStorage.removeItem('user-info');
+    //     navigate('/login');
+    // }
 
     return (
-        <>
-            <h1>Welcome {userInfo?.name}</h1>
-            <h3>{userInfo?.email}</h3>
-            <img src={userInfo?.image} style={{width:200}} alt={userInfo?.name}/>
-            <button onClick={handleLogout}
-            >Logout
-            </button>
-        </>
+        <div>
+            <h1 className='text-xl !p-5'>Welcome {user?.username}</h1>
+            {/* <h3>{user?.email}</h3> */}
+            {/* <img src={user?.image} style={{width:200}} alt={user?.name}/> */}
+            {/* <div>
+                <Calendar />
+            </div> */}
+            
+            {/* <button onClick={handleLogout}>Logout</button> */}
+        </div>
     )
 }
 

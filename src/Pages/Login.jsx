@@ -4,6 +4,7 @@ import { NavLink } from "react-router";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from '../../axiosInstance';
+import axios from 'axios';
 import { useGoogleLogin } from "@react-oauth/google";
 // import { googleAuth } from "./api";
 import { useNavigate } from "react-router";
@@ -15,48 +16,48 @@ const Login = () => {
   const [data,setData]=useState()
   console.log("yeh ha mera data",data?.message)
   const notify = () => toast.info("Login Successfull!");
+ 
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
-    try{
-      const res= await axiosInstance.post(`${baseURL}/api/auth/login`,values)
-      .then((res)=>{
-        console.log("Login Successfull:", res.data);
-        setData(res.data)
-      })
-      
-    } 
-    catch (error) {
-      console.error("Login Failed:", error.response?.data || error.message);
-    }
+    try {
+      const res = await axiosInstance.post(`${baseURL}/api/auth/login`, values);
+      console.log("Login Successfull:", res.data);
+      setData(res.data);
   
+      const { token, user } = res.data;
+      if (token && user) {
+        localStorage.setItem("token",token);
+        localStorage.setItem("user",JSON.stringify(user));
+        toast.success("Login Successful!");
+        navigate("/sidebar");
+      }
+    } catch (error) {
+      console.error("Login Failed:", error.response?.data || error.message);
+      toast.error("Login failed. Please check your credentials.");
+    }
   };
+  
 
   const navigate = useNavigate();
   const responseGoogle = async (authResult) => {
-    console.log("yeh tha code frontend sa", authResult);
-
+    console.log("Google Auth Result:", authResult);
+  
     try {
       if (authResult.code) {
-        await axios.post(`http://localhost:3000/api/auth/google?code=${authResult.code}`)
-          .then((res) => {
-            console.log("yeh ha res from backend", res);
-            const { email, name, image } = res.data.user;
-            const token = res.data.token;
-            const obj = { email, name, token, image };
-            localStorage.setItem("user-info", JSON.stringify(obj));
-            navigate("/dashboard");
-          })
-          .catch((err) => {
-            console.log("yeh ha err", err);
-          });
+        const res = await axios.post(`http://localhost:3000/api/auth/google?code=${authResult.code}`);
+        console.log("Google login response:", res);
+        
+        // Just navigate to dashboard or perform login fetch now
+        navigate("/dashboard");
       } else {
-        console.log(authResult);
-        throw new Error(authResult);
+        throw new Error("Google auth failed");
       }
     } catch (e) {
-      console.log("Error while Google Login...", e);
+      console.log("Error during Google login:", e);
+      toast.error("Google login failed!");
     }
   };
+  
 
   const googleLogin = useGoogleLogin({
     onSuccess: responseGoogle,
