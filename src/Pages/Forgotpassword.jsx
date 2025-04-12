@@ -3,7 +3,17 @@ import React from 'react'
 const Forgotpassword = () => {
   return (
     <div>
-      hello
+      {/* Role : {
+        default : user;
+        enum:["SA","A","D"]
+      }
+
+      const rolecheck = (role) => {
+        try{
+          const R = req.role
+          if (Roles.include(R))
+        }
+      } */}
     </div>
   )
 }

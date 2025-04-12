@@ -19,7 +19,7 @@ const GoolgeLogin = () => {
             const token = res.data.token;
             const obj = { email, name, token, image };
             localStorage.setItem("user-info", JSON.stringify(obj));
-            navigate("/dashboard");
+            navigate("/sidebar");
           })
           .catch((err) => {
             console.log("yeh ha err", err);

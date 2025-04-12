@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Button, Form, Input, Row, Col } from "antd";
 import { Typography } from "antd";
 import { UserOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
@@ -10,39 +10,47 @@ const { TextArea } = Input;
 
 const Contact = () => {
   const [form] = Form.useForm();
-  const [data,setData]=useState()
-  console.log("yeh ha mera data",data?.message)
-  
-  const onFinish = async(values) => {
-    console.log("Received values of form:", values);
-    try{
-      await axios.post(`http://localhost:3000/api/auth/contact`, values) 
-      .then((response)=>{
-        console.log("Message sent Successfully!",response.data);
-        setData(response.data)
-      })
+  const [data, setData] = useState(null);
 
-    }
-    catch(error) {
-      console.error("Message failed to delievered",error);
+  const onFinish = async (values) => {
+    try {
+      const response = await axios.post(`http://localhost:3000/api/auth/contact`, values);
+      console.log("Message sent Successfully!", response.data);
+      setData(response.data);
+    } catch (error) {
+      console.error("Message failed to deliver", error);
     }
   };
 
   return (
     <div>
       <Header />
-      <div className="head">
-        <h1 className="text-5xl !mt-5 font-lato">
-          <center>Get in Touch</center>
-        </h1>
-      </div>
+
+      {/* Hero Banner with background image */}
+      <section
+        className="h-85 bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg')" }}
+      >
+        <h1 className="text-white text-4xl md:text-5xl font-bold">Contact</h1>
+      </section>
+
+      {/* Contact Form Section */}
       <div style={{ maxWidth: "800px", margin: "0 auto", padding: "24px" }} className="!mt-5 !mb-20">
+      <h1 className="text-black text-center text-4xl md:text-5xl">Get in Touch</h1>
+      <br />
         <Typography.Title level={3} style={{ textAlign: "left" }}>
           Drop Us a Line
         </Typography.Title>
         <p className="text-gray-700">
           Feel free to connect with us through our online channels for updates, news, and more.
         </p>
+
+        {data?.message && (
+          <div className="bg-green-100 text-green-800 p-3 rounded mt-4">
+            {data.message}
+          </div>
+        )}
+
         <Form
           form={form}
           className="!mt-10"
@@ -50,7 +58,6 @@ const Contact = () => {
           layout="vertical"
           onFinish={onFinish}
         >
-          {/* Row with Full Name, Email, and Phone Number */}
           <Row gutter={16}>
             <Col xs={24} sm={8}>
               <Form.Item
@@ -83,7 +90,7 @@ const Contact = () => {
               </Form.Item>
             </Col>
           </Row>
-          
+
           <Row>
             <Col xs={24}>
               <Form.Item
@@ -103,9 +110,10 @@ const Contact = () => {
           </Form.Item>
         </Form>
       </div>
+
       <Footer />
     </div>
   );
 };
 
-export default Contact
+export default Contact;

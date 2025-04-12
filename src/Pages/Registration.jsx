@@ -1,18 +1,27 @@
 import React,{useState} from 'react';
-import { Form, Input, Button, Row, Col, Typography, } from 'antd';
+import { Form, Input, Button, Row, Col, Typography, Modal, } from 'antd';
 import { UserOutlined, MailOutlined, PhoneOutlined, LockOutlined } from '@ant-design/icons';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const [form] = Form.useForm();
+  const [otpForm] = Form.useForm();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [emailForOtp, setEmailForOtp] = useState('');
+  const [generatedOtp, setGeneratedOtp] = useState(null);
   const [data,setData]=useState()
   console.log("yeh ha mera data",data?.message)
   // const notify = () => toast.info(data?.message);
-  const notify = () => toast.info("User Registered Successfully");
+
+  const notify = (msg) => toast.info(msg);
+  
+  const navigate = useNavigate();
+
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try{
@@ -20,11 +29,37 @@ const Registration = () => {
       .then((response)=>{
         console.log("Registration Successfull:", response.data);
         setData(response.data)
+        notify("User Registered Successfully")
+        // navigate("/");
       })
-   
-    } 
-    catch (error) {
+      
+      const otp = Math.floor(100000 + Math.random() * 900000);
+      setGeneratedOtp(otp);
+
+      await axios.post("http://localhost:3000/api/auth/otp", {
+        email: values.email,
+        otp: otp,
+      });
+
+      setIsModalVisible(true);
+    } catch (error) {
       console.error("Registration Failed:", error.response?.data || error.message);
+      notify("Registration Failed");
+    }
+  };
+
+  const handleOtpSubmit = async () => {
+    try {
+      const enteredOtp = otpForm.getFieldValue('otp');
+      if (parseInt(enteredOtp) === generatedOtp) {
+        notify("OTP Verified Successfully!");
+        setIsModalVisible(false);
+        navigate('/'); // Navigate to login
+      } else {
+        toast.error("Invalid OTP");
+      }
+    } catch (error) {
+      toast.error("OTP Verification Failed");
     }
   };
 
@@ -163,12 +198,31 @@ const Registration = () => {
         </Row>
 
         <Form.Item>
-          <Button onClick={notify} type="primary" htmlType="submit" style={{ width: '100%' }} >
+          <Button type="primary" htmlType="submit" style={{ width: '100%' }} >
             Register
           </Button>
           <ToastContainer />  
         </Form.Item>
       </Form>
+      
+       {/* OTP Modal */}
+       <Modal
+          title="Enter OTP"
+          open={isModalVisible}
+          onOk={handleOtpSubmit}
+          onCancel={() => setIsModalVisible(false)}
+          okText="Verify OTP"
+        >
+          <Form form={otpForm}>
+            <Form.Item
+              name="otp"
+              rules={[{ required: true, message: 'Please enter the OTP sent to your email!' }]}
+            >
+              <Input placeholder="Enter OTP" maxLength={6} />
+            </Form.Item>
+          </Form>
+        </Modal>
+
     </div>
     <Footer />
     </div>

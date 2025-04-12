@@ -20,7 +20,7 @@ const Login = () => {
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try {
-      const res = await axiosInstance.post(`${baseURL}/api/auth/login`, values);
+      const res = await axios.post(`${baseURL}/api/auth/login`, values);
       console.log("Login Successfull:", res.data);
       setData(res.data);
   
@@ -39,6 +39,7 @@ const Login = () => {
   
 
   const navigate = useNavigate();
+  
   const responseGoogle = async (authResult) => {
     console.log("Google Auth Result:", authResult);
   
@@ -48,7 +49,7 @@ const Login = () => {
         console.log("Google login response:", res);
         
         // Just navigate to dashboard or perform login fetch now
-        navigate("/dashboard");
+        navigate("/sidebar");
       } else {
         throw new Error("Google auth failed");
       }
