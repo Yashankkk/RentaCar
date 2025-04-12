@@ -9,7 +9,6 @@ import { useGoogleLogin } from "@react-oauth/google";
 // import { googleAuth } from "./api";
 import { useNavigate } from "react-router";
 import Header from '../Components/Header';
-import Footer from '../Components/Footer';
 import { baseURL } from '../../config';
 
 const Login = () => {
@@ -139,7 +138,6 @@ const Login = () => {
     </Form>
     </div>
   </div>
-  <Footer />
     </div>
 
   )

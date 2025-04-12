@@ -17,7 +17,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import Dashboard from './Pages/Dashboard.jsx';
 import User from './Components/User.jsx';
 import Cars from './Pages/Cars.jsx';
-// import AdminPanel from './Pages/adminpanel.jsx'
+import Booking from './Pages/Booking.jsx';
 
 const GoogleWrapper = () => {
   return(
@@ -44,7 +44,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/dashboard" element={<Dashboard/>} />
       <Route path="/user" element={<User/>} />
       <Route path="/cars" element={<Cars/>} />
-      {/* <Route path="/admin" element={<AdminPanel/>} /> */}
+      <Route path="/book" element={<Booking/>} />
     </Routes>
     {/* <Footer /> */}
     </BrowserRouter>

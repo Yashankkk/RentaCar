@@ -137,6 +137,14 @@ const Cars = () => {
   return (
     <div>
       <Header />
+      {/* Hero Banner with background image */}
+      <section
+        className="h-85 bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg')" }}
+      >
+        <h1 className="text-white text-4xl md:text-5xl font-bold">Cars</h1>
+      </section>
+
       <div className='grid sm:grid-cols-2 md:grid-cols-4 !p-10'>
         {carData.map((car, index) => (
           <div

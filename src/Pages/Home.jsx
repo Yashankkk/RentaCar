@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import carImage from "../assets/blue.png"; 
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import Booking from './Booking'
 
 const Home = () => {
   useEffect(() => {
@@ -18,37 +19,23 @@ const Home = () => {
   return (
     <div>
       <Header />
-    <div className='relative z-40 !p-8 gap-8' style={{ fontFamily: "Poppins, sans-serif" }} >
+      {/* Hero Banner with background image */}
+      <section
+        className="h-250 bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: "url('src/assets/Supra.jpeg')" }}
+      >
+        <div className='flex flex-col items-center gap-6'>
+          <div>
+            <h1 className="text-white text-4xl md:text-5xl font-serif font-bold">Looking for a <span className='text-blue-500'>vehicle</span>? You're at the right place</h1>
+          </div>
+          <div className='bg-white !p-20 rounded-xl'>
+            <Booking />
+          </div>
+        </div>
+      </section>
       
-      <div className="container mx-auto min-h-[620px] flex items-center !px-4 sm:!px-8 lg:!px-16">
-      <div className="grid place-items-center grid-cols-1 sm:grid-cols-2 gap-8 w-full">
-        
-        {/* Image Section */}
-        <div className="order-1 sm:order-2 flex justify-center" data-aos="fade-left">
-          <img
-            className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]"
-            src={carImage}
-            alt="Car Rental"
-          />
-        </div>
+    <div className='relative z-40 !p-8 gap-8' style={{ fontFamily: "Poppins, sans-serif" }} >
 
-        {/* Text Section */}
-        <div className="order-2 sm:order-1 text-center sm:text-left" data-aos="fade-right">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-serif">
-            Car Rental
-          </h1>
-          <p className="!mt-4 text-base sm:text-lg md:text-xl text-gray-600">
-            Find your perfect rental car today.
-          </p>
-          <button className="!mt-6 bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 
-          text-white !py-3 !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
-            Get Started
-          </button>
-        </div>
-      </div>
-      </div>
-      <br />
-      <br />
     <div className='bg-gray !p-8 gap-8 !pt-10 space-y-0 w-full shadow-lg'>
       <div className='container flex'>
         <div className='grid grid-cols-1 sm:grid-cols-2'>

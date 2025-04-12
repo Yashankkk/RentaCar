@@ -75,6 +75,14 @@ const Registration = () => {
   return (
     <div>
       <Header />
+      {/* Hero Banner with background image */}
+      <section
+        className="h-85 bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg')" }}
+      >
+        <h1 className="text-white text-4xl md:text-5xl font-bold">Register</h1>
+      </section>
+
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px'}} className='!mt-20 !mb-20'>
       <Typography.Title level={3} style={{ textAlign: 'left' }}>
       Don't have a account? Register Now

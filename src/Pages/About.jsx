@@ -9,6 +9,14 @@ const about = () => {
   return (
     <div>
       <Header />
+      {/* Hero Banner with background image */}
+      <section
+        className="h-85 bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg')" }}
+      >
+        <h1 className="text-white text-4xl md:text-5xl font-bold">About</h1>
+      </section>
+
     <div className='bg-gray !p-8 gap-8 !pt-10 space-y-0 w-full '>
       <div className='container flex'>
         <div className='grid grid-cols-1 sm:grid-cols-2'>
