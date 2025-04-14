@@ -9,7 +9,8 @@ import "aos/dist/aos.css";
 import carImage from "../assets/blue.png"; 
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import Booking from './Booking'
+import Booking from '../Components/Booking';
+import Steps from '../Components/Steps';
 
 const Home = () => {
   useEffect(() => {
@@ -31,6 +32,8 @@ const Home = () => {
           <div className='bg-white !p-20 rounded-xl'>
             <Booking />
           </div>
+          <br />
+            <Steps />
         </div>
       </section>
       

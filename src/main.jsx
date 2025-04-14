@@ -17,7 +17,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import Dashboard from './Pages/Dashboard.jsx';
 import User from './Components/User.jsx';
 import Cars from './Pages/Cars.jsx';
-import Booking from './Pages/Booking.jsx';
+import Booking from './Components/Booking.jsx';
 
 const GoogleWrapper = () => {
   return(
