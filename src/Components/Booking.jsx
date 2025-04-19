@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, DatePicker, TimePicker, Button, Row, Col, message } from 'antd';
-import axios from 'axios';
-import dayjs from 'dayjs';
+// import dayjs from 'dayjs';
 
 const vehicleTypes = ['Car', 'Van', 'Scooter', 'Bike'];
 
@@ -18,20 +17,6 @@ const VehicleForm = () => {
       returnDate: values.returnDate.format('YYYY-MM-DD'),
       returnTime: values.returnTime.format('HH:mm'),
     };
-
-    try {
-      const response = await axios.post('http://localhost:3000/api/auth/vehicles', data);
-      message.success('Vehicle search submitted!');
-      console.log('POST response:', response.data);
-
-      // If you also want to get available vehicles:
-      const getResponse = await axios.get('http://localhost:3000/api/auth/vehicles');
-      console.log('GET response:', getResponse.data);
-
-    } catch (error) {
-      console.error(error);
-      message.error('Something went wrong!');
-    }
   };
 
   return (

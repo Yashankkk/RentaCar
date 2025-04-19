@@ -11,6 +11,7 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Booking from '../Components/Booking';
 import Steps from '../Components/Steps';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
@@ -27,13 +28,13 @@ const Home = () => {
       >
         <div className='flex flex-col items-center gap-6'>
           <div>
-            <h1 className="text-white text-4xl md:text-5xl font-serif font-bold">Looking for a <span className='text-blue-500'>vehicle</span>? You're at the right place</h1>
+            <h1 className="text-white text-4xl md:text-5xl font-serif font-bold">Looking for a <span className='text-blue-700'><b>vehicle</b></span>? You're at the right place</h1>
           </div>
-          <div className='bg-white !p-20 rounded-xl'>
+          <div className='bg-white !p-20 !mt-5 rounded-xl'>
             <Booking />
           </div>
           <br />
-            <Steps />
+            {/* <Steps /> */}
         </div>
       </section>
       
@@ -198,10 +199,12 @@ const Home = () => {
           </div>
         </div>
         <br />
+        <NavLink to="/cars">
         <center><button className="bg-gradient-to-r from-blue-500 to-purple-700 hover:from-blue-600 hover:to-blue-800 text-white !py-3 cursor-pointer
         !px-6 md:px-8 lg:px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg" data-aos="fade-up">
           Get Started
         </button></center>
+        </NavLink>
       </div>
     </div>
     <br />

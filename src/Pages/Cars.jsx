@@ -73,9 +73,9 @@ const carData = [
     price: 2000,
     image: "https://imgd.aeplcdn.com/640X480/image/used/xv5xj1imzn9i.jpeg?q=80",
     seats: "5 Seats",
-    fuel: "Manual",
+    fuel: "Petrol",
     year: "2022",
-    transmission: "Automatic",
+    transmission: "Manual",
   },
   {
     id: 8,
