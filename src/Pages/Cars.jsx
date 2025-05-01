@@ -181,7 +181,7 @@ const Cars = () => {
                   </div>
                 </div>
 
-                <NavLink to="/scorpio">
+                <NavLink to="/car">
                 <Button type='primary' className="w-full !mt-6 text-white font-semibold !py-2 rounded-lg">
                   Rent Now
                 </Button>

@@ -18,6 +18,7 @@ import Dashboard from './Pages/Dashboard.jsx';
 import User from './Components/User.jsx';
 import Cars from './Pages/Cars.jsx';
 import Booking from './Components/Booking.jsx';
+import Car from './Pages/Car1.jsx';
 import Scorpio from './Pages/Scorpio.jsx';
 
 const GoogleWrapper = () => {
@@ -46,6 +47,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/user" element={<User/>} />
       <Route path="/cars" element={<Cars/>} />
       <Route path="/book" element={<Booking/>} />
+      <Route path="/car" element={<Car/>} />
       <Route path="/scorpio" element={<Scorpio/>} />
     </Routes>
     {/* <Footer /> */}
