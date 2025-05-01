@@ -39,31 +39,31 @@ const Login = () => {
 
   const navigate = useNavigate();
   
-  const responseGoogle = async (authResult) => {
-    console.log("Google Auth Result:", authResult);
+  // const responseGoogle = async (authResult) => {
+  //   console.log("Google Auth Result:", authResult);
   
-    try {
-      if (authResult.code) {
-        const res = await axios.post(`http://localhost:3000/api/auth/google?code=${authResult.code}`);
-        console.log("Google login response:", res);
+  //   try {
+  //     if (authResult.code) {
+  //       const res = await axios.post(`http://localhost:3000/api/auth/google?code=${authResult.code}`);
+  //       console.log("Google login response:", res);
         
-        // Just navigate to dashboard or perform login fetch now
-        navigate("/sidebar");
-      } else {
-        throw new Error("Google auth failed");
-      }
-    } catch (e) {
-      console.log("Error during Google login:", e);
-      toast.error("Google login failed!");
-    }
-  };
+  //       // Just navigate to dashboard or perform login fetch now
+  //       navigate("/sidebar");
+  //     } else {
+  //       throw new Error("Google auth failed");
+  //     }
+  //   } catch (e) {
+  //     console.log("Error during Google login:", e);
+  //     toast.error("Google login failed!");
+  //   }
+  // };
   
 
-  const googleLogin = useGoogleLogin({
-    onSuccess: responseGoogle,
-    onError: responseGoogle,
-    flow: "auth-code",
-  });
+  // const googleLogin = useGoogleLogin({
+  //   onSuccess: responseGoogle,
+  //   onError: responseGoogle,
+  //   flow: "auth-code",
+  // });
 
   return (
     <div>
@@ -124,17 +124,17 @@ const Login = () => {
             Forgot Password?
           </NavLink>
           </div>
-            
+          
           <Form.Item label={null}>
             <Button onClick={notify} type="primary" htmlType="submit" className='!ml-8' >
               Submit
             </Button>
-            <br />
+            {/* <br />
             <br />
             <Button onClick={googleLogin}>Sign in with Google</Button>
-            <ToastContainer />
+            <ToastContainer /> */}
           </Form.Item>
-          
+    
     </Form>
     </div>
   </div>

@@ -23,9 +23,9 @@ const Footer = () => {
         <div className="flex flex-cols-1 md:flex-cols-3 gap-8 justify-between md:text-left">
           
           {/* Company Details */}
-          <div className="w-full md:w-1/3">
+          <div className="w-full md:w-1/3 !ml-50">
             <h1 className="text-2xl font-bold font-serif !mb-3">RideEase</h1>
-            <p className="text-sm !mb-4">
+            <p className="text-lg !mb-4">
               Experience the best car rental services with top-notch vehicles and seamless booking.
             </p>
             <div className="flex justify-center md:justify-start items-center gap-2">
@@ -62,7 +62,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h2 className="text-xl font-semibold font-serif !mb-3">Quick Links</h2>
               <ul className="space-y-2">
                 {FooterLinks.map((link, index) => (
@@ -71,7 +71,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
             <div>
               <h2 className="text-xl font-semibold font-serif !mb-3">Our Services</h2>
               <ul className="space-y-2">
