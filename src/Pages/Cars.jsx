@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Car, Fuel, Users, Calendar } from 'lucide-react';
 import { Button } from "antd";
 import AOS from "aos";
@@ -11,7 +12,7 @@ const carData = [
     id: 1,
     name: "Mahindra Scorpio",
     price: 3500,
-    image: "/src/assets/scorpio.jpeg",
+    image: "https://feeds.abplive.com/onecms/images/uploaded-images/2022/06/28/3a265a09e25cf46be4a1431fb39abd27_original.jpg?impolicy=abp_cdn&imwidth=1200",
     seats: "7 Seats",
     fuel: "Diesel",
     year: "2024",
@@ -180,9 +181,11 @@ const Cars = () => {
                   </div>
                 </div>
 
+                <NavLink to="/scorpio">
                 <Button type='primary' className="w-full !mt-6 text-white font-semibold !py-2 rounded-lg">
                   Rent Now
                 </Button>
+                </NavLink>
               </div>
             </div>
           </div>

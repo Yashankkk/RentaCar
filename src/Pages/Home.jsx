@@ -24,7 +24,7 @@ const Home = () => {
       {/* Hero Banner with background image */}
       <section
         className="h-250 bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('src/assets/Supra.jpeg')" }}
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/15886418/pexels-photo-15886418/free-photo-of-interior-oc-citroen-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
       >
         <div className='flex flex-col items-center gap-6'>
           <div>
@@ -107,7 +107,7 @@ const Home = () => {
         <div className='grid grid-col-3 sm:grid-cols-2 md:grid-cols-3 gap-8'>
           <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105' data-aos="fade-up" data-aos-delay="0">
             <div className='card-body'>
-              <img src="src\assets\scorpio.jpeg" alt="scorpio" className='rounded-lg'/>
+              <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2022/06/28/3a265a09e25cf46be4a1431fb39abd27_original.jpg?impolicy=abp_cdn&imwidth=1200" alt="scorpio" className='rounded-lg'/>
               <br /><br />
               <h1 className='text-lg !p-3'>Mahindra Scorpio</h1>
               <p className='!p-3 text-blue-500 text-xl'>$149<span className='text-[grey] text-sm'>/day</span></p> 
@@ -138,7 +138,7 @@ const Home = () => {
 
           <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105' data-aos="fade-up" data-aos-delay="500">
             <div className='card-body'>
-            <img src="src\assets\Alto.jpg" alt="alto" className='rounded-lg h-82 w-full'/>
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcms%2Farticles%2F3201621%2FMaruti_Suzuki_Alto_K10_55063ca197.jpg&w=750&q=75" alt="alto" className='rounded-lg h-92 w-full'/>
             <br /><br />
               <h1 className='text-lg !p-3'>Lord Alto </h1>
               <p className='!p-3 text-blue-500 text-xl'>$69<span className='text-[grey] text-sm'>/day</span></p>
@@ -169,7 +169,7 @@ const Home = () => {
 
           <div className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105' data-aos="fade-up" data-aos-delay="1000">
               <div className='card-body'>
-                <img src="src\assets\virtus.jpg" alt="virtus" className='rounded-lg'/>
+                <img src="https://turbocharged.in/wp-content/uploads/2023/09/Volkswagen-Virtus-GT-Edge-Carbon-Steel.jpg" alt="virtus" className='h-92 w-full rounded-lg'/>
                 <br /><br />
                 <h1 className='text-lg !p-3'>Virtus GT</h1>
                 <p className='!p-3 text-blue-500 text-xl'>$99<span className='text-[grey] text-sm'>/day</span></p>

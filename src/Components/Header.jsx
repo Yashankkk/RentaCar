@@ -58,11 +58,11 @@ const Header = () => {
               <InfoCircleOutlined /> About
             </p>
           </NavLink>
-          <NavLink>
+          {/* <NavLink>
             <p className="hover:scale-105 cursor-pointer">
               <FileSearchOutlined /> News
             </p>
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/cars">
             <p className="hover:scale-105 cursor-pointer">
               <CarOutlined /> Cars

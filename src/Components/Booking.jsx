@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, DatePicker, TimePicker, Button, Row, Col, message } from 'antd';
+import { NavLink } from 'react-router-dom';
 // import dayjs from 'dayjs';
 
 const vehicleTypes = ['Car', 'Van', 'Scooter', 'Bike'];
@@ -77,9 +78,11 @@ const VehicleForm = () => {
       </Row>
 
       <Form.Item>
+        <NavLink to="/cars">
         <Button type="primary" className="hover:scale-105 " htmlType="submit" style={{ backgroundColor: '#0022cc', borderColor: '#0022cc' }}>
           Find a Vehicle
         </Button>
+        </NavLink>
       </Form.Item>
     </Form>
   );
