@@ -48,7 +48,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-15 space-x-6 text-lg text-white">
-          <NavLink to="/home">
+          <NavLink to="/">
             <p className="hover:scale-105 cursor-pointer">
               <HomeOutlined /> Home
             </p>
@@ -83,7 +83,7 @@ const Header = () => {
             </button>
           </NavLink>
 
-          <NavLink to="/">
+          <NavLink to="/login">
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-blue-800 text-white !py-3 !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
               <UserOutlined /> Login
             </button>

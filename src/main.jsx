@@ -21,23 +21,23 @@ import Booking from './Components/Booking.jsx';
 import Car from './Pages/Car1.jsx';
 import Scorpio from './Pages/Scorpio.jsx';
 
-const GoogleWrapper = () => {
-  return(
-    <GoogleOAuthProvider clientId="371112211861-lb7qs932qqpuf7mf759rvp9oc5spf6f4.apps.googleusercontent.com">
-    <Login />
-  </GoogleOAuthProvider>
-  )
+// const GoogleWrapper = () => {
+//   return(
+//     <GoogleOAuthProvider clientId="371112211861-lb7qs932qqpuf7mf759rvp9oc5spf6f4.apps.googleusercontent.com">
+//     <Login />
+//   </GoogleOAuthProvider>
+//   )
  
-}
+// }
 
 createRoot(document.getElementById('root')).render(
   <div>
     <BrowserRouter>
     {/* <Header /> */}
     <Routes>
-    <Route path="/" element={<GoogleWrapper/>} />
-      {/* <Route path="/login" element={<Login/>} /> */}
-      <Route path="/home" element={<Home/>} />  
+    {/* <Route path="/" element={<GoogleWrapper/>} /> */}
+      <Route path="/" element={<Home/>} />
+      <Route path="/login" element={<Login/>} />  
       <Route path="/about" element={<About/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/registration" element={<Registration/>} />

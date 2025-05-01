@@ -68,11 +68,11 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className='h-screen bg-[url("assets\hero_fpo.jpg")] flex flex-col justify-center items-center bg-cover opacity-90 bg-center bg-no-repeat'>
+      <div className='h-screen bg-[url("https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg")] flex flex-col justify-center items-center bg-cover opacity-90 bg-center bg-no-repeat'>
     <div className='!p-10 bg-white md:!p-10 rounded-sm shadow-xl w-full max-w-md'>
     <h1 className='font-serif text-center text-4xl md:text-5xl'>Login</h1>
     <br />
-    <p className='text-center mt-2 text-sm md:text-base'>doesn't have an account? 
+    <p className='text-center !mt-2 text-sm md:text-base'>doesn't have an account? 
       <NavLink to="/Registration"><span className='text-blue-800 underline !ml-1'>Sign Up</span></ NavLink></p>
     <Form className='!mt-10'
     name="basic"
