@@ -116,7 +116,7 @@ const Sidebar = () => {
       key: "2",
       danger: true,
       label: (
-      <NavLink to="/" onClick={handleLogout} style={{ color: "red" }}>
+      <NavLink to="/login" onClick={handleLogout} style={{ color: "red" }}>
         Log out
       </NavLink>
     ),
