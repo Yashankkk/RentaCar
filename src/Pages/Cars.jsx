@@ -17,6 +17,8 @@ const carData = [
     fuel: "Diesel",
     year: "2024",
     transmission: "Automatic",
+    buttonLabel: "Rent Now",
+    buttonLink: "/car",
   },
   {
     id: 2,
@@ -181,11 +183,12 @@ const Cars = () => {
                   </div>
                 </div>
 
-                <NavLink to="/car">
-                <Button type='primary' className="w-full !mt-6 text-white font-semibold !py-2 rounded-lg">
-                  Rent Now
-                </Button>
+                <NavLink to={car.buttonLink || `/car/${car.id}`}>
+                  <Button type='primary' className="w-full !mt-6 text-white font-semibold !py-2 rounded-lg">
+                    {car.buttonLabel || "Rent Now"}
+                  </Button>
                 </NavLink>
+
               </div>
             </div>
           </div>

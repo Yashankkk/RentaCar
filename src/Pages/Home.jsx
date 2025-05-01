@@ -130,9 +130,11 @@ const Home = () => {
                 </div>
               </div>
               <br />
+              <NavLink to="/cars">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
+              </ NavLink>
               </div>
           </div>
 
@@ -161,9 +163,11 @@ const Home = () => {
                 </div>
               </div>
               <br />
+              <NavLink to="/cars">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
+              </NavLink>
             </div>
           </div>
 
@@ -192,9 +196,11 @@ const Home = () => {
                 </div>
               </div>
               <br />
+              <NavLink to="/cars">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
+              </NavLink>
               </div>
           </div>
         </div>
@@ -209,7 +215,7 @@ const Home = () => {
     </div>
     <br />
     <div className='relative'>
-      <img src="src\assets\driving.jpg" className='w-full h-170 object-cover' alt="driving" />
+      <img src="https://images.pexels.com/photos/5875895/pexels-photo-5875895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className='w-full h-170 object-cover' alt="driving" />
       <div className='absolute inset-0 flex flex-col items-center justify-center bg-black/50' >
         <h1 className='text-white text-4xl font-bold font-serif !mb-4' data-aos="zoom-in">Economics of renting a car vs owning one</h1><br />
         <button className='text-white bg-blue-600 cursor-pointer hover:bg-blue-700 font-semibold !py-2 !px-4 rounded-full 
@@ -226,7 +232,7 @@ const Home = () => {
           <div className='card shadow-lg rounded-lg bg-[#dedcdc] text-center group space-y-3 !p-4 transform transition-all duration-300 hover:scale-105' 
           data-aos="fade-up" data-aos-delay="0">
             <div className='grid place-items-center'>
-              <img className='h-20 w-20 rounded-full' src="src\assets\john.jpg" alt="" />
+              <img className='h-20 w-20 rounded-full' src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/d95c1f148207527.62d1246c25004.jpg" alt="" />
               <p className='text-black text-xl'>John Doe</p>
               <br /><br />
               <h1 className='text-lg !pt-5 text-center font-bold text-yellow'>⭐⭐⭐⭐⭐</h1>
@@ -237,7 +243,7 @@ const Home = () => {
           <div className='card shadow-lg rounded-lg bg-[#dedcdc] text-center group space-y-3 !p-4 transform transition-all duration-300 hover:scale-105'
           data-aos="fade-up" data-aos-delay="500">
             <div className='grid place-items-center'>
-              <img className='h-20 w-20 rounded-full' src="src\assets\sarah.avif" alt="" />
+              <img className='h-20 w-20 rounded-full' src="https://img.freepik.com/free-psd/3d-rendering-hair-style-avatar-design_23-2151869159.jpg?semt=ais_hybrid&w=740" alt="" />
               <p className='text-black text-xl'>Sarah Johnson</p>
               <br /><br />
               <h1 className='text-lg !pt-5 text-center font-bold text-yellow'>⭐⭐⭐⭐⭐</h1>
@@ -248,7 +254,7 @@ const Home = () => {
           <div className='card shadow-lg rounded-lg bg-[#dedcdc] text-center group space-y-3 !p-4 transform transition-all duration-300 hover:scale-105'
           data-aos="fade-up" data-aos-delay="1000">
             <div className='grid place-items-center'>
-              <img className='h-20 w-20 rounded-full' src="src\assets\emma.avif" alt="" />
+              <img className='h-20 w-20 rounded-full' src="https://img.freepik.com/free-psd/3d-rendering-hair-style-avatar-design_23-2151869153.jpg" alt="" />
               <p className='text-black text-xl'>Emma Williams</p>
               <br /><br />
               <h1 className='text-lg !pt-5 text-center font-bold text-yellow'>⭐⭐⭐⭐⭐</h1>
