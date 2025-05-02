@@ -78,13 +78,13 @@ const Header = () => {
         {/* Right Side - Buttons */}
         <div className="hidden md:flex gap-8 space-x-4">
           <NavLink to="/registration">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-blue-800 text-white !py-3 !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
+            <button className="bg-gradient-to-r from-green-500 to-green-500 hover:from-blue-600 hover:to-blue-800 text-white !py-3 !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
               <UserAddOutlined /> Sign Up
             </button>
           </NavLink>
 
           <NavLink to="/login">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-blue-800 text-white !py-3 !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
+            <button className="bg-gradient-to-r from-green-500 to-green-500 hover:from-blue-600 hover:to-blue-800 text-white !py-3 !px-6 md:!px-8 lg:!px-10 rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 active:scale-95 text-sm md:text-base lg:text-lg">
               <UserOutlined /> Login
             </button>
           </NavLink>

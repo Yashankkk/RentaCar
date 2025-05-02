@@ -30,7 +30,7 @@ const about = () => {
               We aim to connect passengers with reliable drivers, ensuring affordability, comfort, and punctuality every time you ride.</p>
           </div>
           <div className='order-2 sm:order-1' data-aos="fade-right">
-            <img className='relative -z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto' src="src\assets\blue-car.png" alt="" />
+            <img className='relative -z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto' src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40087/thar-exterior-right-front-three-quarter-37.jpeg?isig=0&q=80" alt="" />
           </div>
         </div>
       </div>
@@ -77,7 +77,7 @@ const about = () => {
     </div>
     <br />
     <div className='relative !mt-10'>
-      <img src="src\assets\driving.jpg" className='w-full h-170 object-cover' alt="driving" />
+      <img src="https://images.pexels.com/photos/5875895/pexels-photo-5875895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className='w-full h-170 object-cover' alt="driving" />
       <div className='absolute inset-0 flex flex-col items-center justify-center bg-black/50'>
         <h1 className='text-white text-4xl font-bold font-serif !mb-4' data-aos="zoom-in">Economics of renting a car vs owning one</h1><br />
         <button className='text-white bg-blue-600 cursor-pointer hover:bg-blue-700 font-semibold !py-2 !px-4 rounded-full 

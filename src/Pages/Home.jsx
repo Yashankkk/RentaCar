@@ -15,13 +15,12 @@ import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, }); // Initialize AOS with a duration of 1000ms
+    AOS.init({ duration: 1000, }); 
     }, []);
 
   return (
     <div>
       <Header />
-      {/* Hero Banner with background image */}
       <section
         className="h-250 bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('https://images.pexels.com/photos/15886418/pexels-photo-15886418/free-photo-of-interior-oc-citroen-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
@@ -53,7 +52,7 @@ const Home = () => {
               We aim to connect passengers with reliable drivers, ensuring affordability, comfort, and punctuality every time you ride.</p>
           </div>
           <div className='order-2 sm:order-1' data-aos="fade-right">
-            <img className='relative -z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto' src="src\assets\blue-car.png" alt="" />
+            <img className='relative -z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto' src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40087/thar-exterior-right-front-three-quarter-37.jpeg?isig=0&q=80" alt="" />
           </div>
         </div>
       </div>
@@ -110,7 +109,7 @@ const Home = () => {
               <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2022/06/28/3a265a09e25cf46be4a1431fb39abd27_original.jpg?impolicy=abp_cdn&imwidth=1200" alt="scorpio" className='rounded-lg'/>
               <br /><br />
               <h1 className='text-lg !p-3'>Mahindra Scorpio</h1>
-              <p className='!p-3 text-blue-500 text-xl'>$149<span className='text-[grey] text-sm'>/day</span></p> 
+              <p className='!p-3 text-blue-500 text-xl'>₹3500<span className='text-[grey] text-sm'>/day</span></p> 
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center gap-2 text-gray-600">
                   <Users size={20} />
@@ -130,7 +129,7 @@ const Home = () => {
                 </div>
               </div>
               <br />
-              <NavLink to="/cars">
+              <NavLink to="/scorpio">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
@@ -142,8 +141,8 @@ const Home = () => {
             <div className='card-body'>
             <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcms%2Farticles%2F3201621%2FMaruti_Suzuki_Alto_K10_55063ca197.jpg&w=750&q=75" alt="alto" className='rounded-lg h-92 w-full'/>
             <br /><br />
-              <h1 className='text-lg !p-3'>Lord Alto </h1>
-              <p className='!p-3 text-blue-500 text-xl'>$69<span className='text-[grey] text-sm'>/day</span></p>
+              <h1 className='text-lg !p-3'>Maruti Alto </h1>
+              <p className='!p-3 text-blue-500 text-xl'>₹1500<span className='text-[grey] text-sm'>/day</span></p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center gap-2 text-gray-600">
                   <Users size={20} />
@@ -151,7 +150,7 @@ const Home = () => {
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <Fuel size={20} />
-                  <span>Diesel</span>
+                  <span>Petrol</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <Calendar size={20} />
@@ -163,7 +162,7 @@ const Home = () => {
                 </div>
               </div>
               <br />
-              <NavLink to="/cars">
+              <NavLink to="/alto">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
@@ -176,7 +175,7 @@ const Home = () => {
                 <img src="https://turbocharged.in/wp-content/uploads/2023/09/Volkswagen-Virtus-GT-Edge-Carbon-Steel.jpg" alt="virtus" className='h-92 w-full rounded-lg'/>
                 <br /><br />
                 <h1 className='text-lg !p-3'>Virtus GT</h1>
-                <p className='!p-3 text-blue-500 text-xl'>$99<span className='text-[grey] text-sm'>/day</span></p>
+                <p className='!p-3 text-blue-500 text-xl'>₹2700<span className='text-[grey] text-sm'>/day</span></p>
                 <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center gap-2 text-gray-600">
                   <Users size={20} />
@@ -196,7 +195,7 @@ const Home = () => {
                 </div>
               </div>
               <br />
-              <NavLink to="/cars">
+              <NavLink to="/virtus">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
