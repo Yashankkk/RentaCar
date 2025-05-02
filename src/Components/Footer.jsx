@@ -7,7 +7,7 @@ import {
   PhoneOutlined,
 } from "@ant-design/icons";
 import "@fontsource/poppins";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom"; // Corrected import
 
 const FooterLinks = [
   { title: "Home", link: "/home" },
@@ -18,12 +18,14 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#02084d] text-gray-300 ">
-      <div className="container mx-auto !px-6 !py-10" style={{ fontFamily: "Poppins, sans-serif" }}>
-        <div className="flex flex-cols-1 md:flex-cols-3 gap-8 justify-between md:text-left">
-          
+    <footer className="bg-[#02084d] text-gray-300">
+      <div
+        className="max-w-7xl mx-auto !px-4 sm:!px-6 lg:!px-8 !py-10"
+        style={{ fontFamily: "Poppins, sans-serif" }}
+      >
+        <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Company Details */}
-          <div className="w-full md:w-1/3 !ml-50">
+          <div className="flex-1 text-center md:text-left">
             <h1 className="text-2xl font-bold font-serif !mb-3">RideEase</h1>
             <p className="text-lg !mb-4">
               Experience the best car rental services with top-notch vehicles and seamless booking.
@@ -50,44 +52,43 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Links Section */}
-          <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-10 ">
+          {/* Links Section */}
+          <div className="flex-1 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
             <div>
               <h2 className="text-xl font-semibold font-serif !mb-3">Important Links</h2>
               <ul className="space-y-2">
                 {FooterLinks.map((link, index) => (
-                  <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
-                    ➜ <a href={link.link}>{link.title}</a>
+                  <li
+                    key={index}
+                    className="hover:translate-x-1 transition-all duration-300 hover:text-red-500"
+                  >
+                    ➜ <NavLink to={link.link}>{link.title}</NavLink>
                   </li>
                 ))}
               </ul>
             </div>
-            {/* <div>
-              <h2 className="text-xl font-semibold font-serif !mb-3">Quick Links</h2>
-              <ul className="space-y-2">
-                {FooterLinks.map((link, index) => (
-                  <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
-                    ➜ <a href={link.link}>{link.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
+
             <div>
               <h2 className="text-xl font-semibold font-serif !mb-3">Our Services</h2>
               <ul className="space-y-2">
-                {["Car Hire", "Luxury Cars", "Self-Drive", "Chauffeur Service"].map((service, index) => (
-                  <li key={index} className="cursor-pointer hover:translate-x-1 transition-all duration-300 hover:text-red-500">
-                    ➜ {service}
-                  </li>
-                ))}
+                {["Car Hire", "Luxury Cars", "Self-Drive", "Chauffeur Service"].map(
+                  (service, index) => (
+                    <li
+                      key={index}
+                      className="hover:translate-x-1 transition-all duration-300 hover:text-red-500"
+                    >
+                      ➜ {service}
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-center !mt-10 border-t border-gray-500 !pt-6">
-          <p>&copy; {new Date().getFullYear()} Car Rental. All rights reserved.</p>
+        <div className="text-center !mt-10 border-t border-gray-500 !pt-6 text-sm">
+          <p>&copy; {new Date().getFullYear()} RideEase. All rights reserved.</p>
         </div>
       </div>
     </footer>
