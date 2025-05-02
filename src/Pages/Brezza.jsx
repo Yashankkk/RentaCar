@@ -11,35 +11,35 @@ export default function BMWCarRental() {
   const [dropoffLocation, setDropoffLocation] = useState('');
   const [pickupDate, setPickupDate] = useState('May 01, 2025');
   const [returnDate, setReturnDate] = useState('May 01, 2025');
-  const [selectedImage, setSelectedImage] = useState('https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-left-front-three-quarter-2.webp?isig=0&q=80');
+  const [selectedImage, setSelectedImage] = useState('https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80');
 
   const carImages = [
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-left-front-three-quarter-2.webp?isig=0&q=80',
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-right-rear-three-quarter.jpeg?isig=0&q=80',
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-rear-view.jpeg?isig=0&q=80',
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-left-rear-three-quarter.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-right-side-view.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-right-side-view.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/107543/brezza-exterior-rear-view.jpeg?isig=0&q=80',
   ];
 
   const carSpecs = [
-    { name: 'Body', value: 'SUV' },
-    { name: 'Seat', value: '7 seats' },
+    { name: 'Body', value: 'Compact SUV' },
+    { name: 'Seat', value: '5 seats' },
     { name: 'Door', value: '4 doors' },
     { name: 'Luggage', value: '150' },
-    { name: 'Fuel Type', value: 'Diesel' },
-    { name: 'Engine', value: '2184 cc' },
-    { name: 'Year', value: '2024' },
+    { name: 'Fuel Type', value: 'Petrol' },
+    { name: 'Engine', value: '1462 cc' },
+    { name: 'Year', value: '2022' },
     { name: 'Mileage', value: '200' },
-    { name: 'Transmission', value: 'Automatic' },
-    { name: 'Drive', value: '4WD' },
-    { name: 'Fuel Economy', value: '14.7 kmpl' },
-    { name: 'Exterior Color', value: 'Deep Forest' },
-    { name: 'Interior Color', value: 'Black' }
+    { name: 'Transmission', value: 'Manual' },
+    { name: 'Drive', value: 'FWD' },
+    { name: 'Fuel Economy', value: '20 kmpl' },
+    { name: 'Exterior Color', value: 'Sizzling Red' },
+    { name: 'Interior Color', value: 'Gray' }
   ];
 
-  const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', 'Sunroof'];
+  const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', '4 Airbag' ];
 
   const handleBookNow = () => {
-    alert('Booking confirmed for the BMW M2!');
+    alert('Booking confirmed for the Maruti Brezza!');
   };
 
   return (
@@ -66,10 +66,10 @@ export default function BMWCarRental() {
             ))}
           </div>
 
-          <h1 className="text-3xl font-bold text-blue-900 !mt-6 !mb-2">SCORPIO N 2024</h1>
+          <h1 className="text-3xl font-bold text-blue-900 !mt-6 !mb-2">Maruti Brezza</h1>
           <p className="text-gray-700 !mb-4">
-          The Scorpio N is a step up from the Scorpio Classic. Though it remains rugged with a commanding presence, it is a premium, large, spacious, and feature-loaded three-row SUV. 
-          It has got powerful engine options, seamlessly shifting auto gearboxes, and an absorbent ride, making it great for both city driving and long-distance journeys.
+          Maruti Brezza VXi is the top model in the Brezza lineup and the rental price of Brezza top model is Rs. 2000/day. It gives a mileage of 20.1 kmpl.
+           Maruti Brezza VXi is available in Manual transmission.
           </p>
 
           <h2 className="text-2xl font-bold text-blue-900 !mb-3">Specifications</h2>
@@ -99,7 +99,7 @@ export default function BMWCarRental() {
         <div className="bg-white !p-6 rounded-lg shadow-md sticky top-10">
           <div className="!mb-4 bg-gray-100 justify-between text-center !ml-40 !pt-5 w-50 h-30">
             <p className="text-gray-600 text-sm">Daily rate</p>
-            <p className="text-4xl font-bold text-blue-900">₹3500</p>
+            <p className="text-4xl font-bold text-blue-900">₹2000</p>
           </div>
 
           <h2 className="text-xl font-bold !mb-4">Booking this car</h2>

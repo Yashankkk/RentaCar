@@ -11,35 +11,35 @@ export default function BMWCarRental() {
   const [dropoffLocation, setDropoffLocation] = useState('');
   const [pickupDate, setPickupDate] = useState('May 01, 2025');
   const [returnDate, setReturnDate] = useState('May 01, 2025');
-  const [selectedImage, setSelectedImage] = useState('https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-left-front-three-quarter-2.webp?isig=0&q=80');
+  const [selectedImage, setSelectedImage] = useState('https://imgd.aeplcdn.com/664x374/n/cw/ec/139139/harrier-facelift-exterior-right-front-three-quarter-2.jpeg?isig=0&q=80');
 
   const carImages = [
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-left-front-three-quarter-2.webp?isig=0&q=80',
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-right-rear-three-quarter.jpeg?isig=0&q=80',
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-rear-view.jpeg?isig=0&q=80',
-    'https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-left-rear-three-quarter.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/139139/harrier-facelift-exterior-right-front-three-quarter-2.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/139139/harrier-facelift-exterior-right-side-view.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/139139/harrier-facelift-exterior-right-rear-three-quarter-12.jpeg?isig=0&q=80',
+    'https://imgd.aeplcdn.com/664x374/n/cw/ec/139139/harrier-exterior-right-rear-three-quarter-25.jpeg?isig=0&q=80',
   ];
 
   const carSpecs = [
     { name: 'Body', value: 'SUV' },
-    { name: 'Seat', value: '7 seats' },
+    { name: 'Seat', value: '5 seats' },
     { name: 'Door', value: '4 doors' },
     { name: 'Luggage', value: '150' },
     { name: 'Fuel Type', value: 'Diesel' },
-    { name: 'Engine', value: '2184 cc' },
+    { name: 'Engine', value: '1956 cc' },
     { name: 'Year', value: '2024' },
     { name: 'Mileage', value: '200' },
     { name: 'Transmission', value: 'Automatic' },
     { name: 'Drive', value: '4WD' },
-    { name: 'Fuel Economy', value: '14.7 kmpl' },
-    { name: 'Exterior Color', value: 'Deep Forest' },
+    { name: 'Fuel Economy', value: '14.6 to 16.8 kmpl' },
+    { name: 'Exterior Color', value: 'Sunlit Yellow' },
     { name: 'Interior Color', value: 'Black' }
   ];
 
-  const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', 'Sunroof'];
+  const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', 'Moonroof'];
 
   const handleBookNow = () => {
-    alert('Booking confirmed for the BMW M2!');
+    alert('Booking confirmed for the Tata Harrier!');
   };
 
   return (
@@ -66,10 +66,10 @@ export default function BMWCarRental() {
             ))}
           </div>
 
-          <h1 className="text-3xl font-bold text-blue-900 !mt-6 !mb-2">SCORPIO N 2024</h1>
+          <h1 className="text-3xl font-bold text-blue-900 !mt-6 !mb-2">Tata Harrier 2024</h1>
           <p className="text-gray-700 !mb-4">
-          The Scorpio N is a step up from the Scorpio Classic. Though it remains rugged with a commanding presence, it is a premium, large, spacious, and feature-loaded three-row SUV. 
-          It has got powerful engine options, seamlessly shifting auto gearboxes, and an absorbent ride, making it great for both city driving and long-distance journeys.
+          The Harrier is a sturdy and imposing SUV, built on a Land Rover platform, and boasts a five-star safety rating. Its spacious and comfortable cabin is replete with tech, 
+          features, and a big boot. Driving it is an engaging experience thanks to a potent engine and well-balanced handling.
           </p>
 
           <h2 className="text-2xl font-bold text-blue-900 !mb-3">Specifications</h2>
