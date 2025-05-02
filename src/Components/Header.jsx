@@ -105,7 +105,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <nav className="md:hidden bg-white/80 backdrop-blur-md !p-4 space-y-4 text-black">
-          <NavLink to="/home">
+          <NavLink to="/">
             <p className="hover:text-blue-600 cursor-pointer">Home</p>
           </NavLink>
           <NavLink to="/about">
@@ -122,7 +122,7 @@ const Header = () => {
               Sign Up
             </button>
           </NavLink>
-          <NavLink to="/">
+          <NavLink to="/login">
             <button className="border border-white !px-4 !py-2 rounded-lg w-full !mt-2 hover:text-blue-600 cursor-pointer">
               Login
             </button>

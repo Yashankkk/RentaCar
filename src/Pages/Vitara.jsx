@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Check, Twitter, Facebook, Share2, Linkedin, Mail } from 'lucide-react';
 import { Button, Input, Select, Divider } from 'antd';
+import axios from 'axios';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 
@@ -38,8 +39,24 @@ export default function BMWCarRental() {
 
   const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', '4 Airbag' ];
 
-  const handleBookNow = () => {
-    alert('Booking confirmed for the Maruti Grand Vitara!');
+  const handleBookNow = async () => {
+    const bookingData = {
+      pickupLocation,
+      dropoffLocation,
+      pickupDate,
+      returnDate,
+      carModel: 'Grand Vitara',
+      pricePerDay: 2500,
+    };
+    try{
+      const response = await axios.post(`http://localhost:3000/api/auth/bookings`, bookingData);
+      console.log('Booking Successfull:', response.data);
+      return alert('Booking successful!');
+  
+    } catch (error) {
+    console.error('Booking error:', error);
+    alert('An error occurred while booking.');
+  }
   };
 
   return (
@@ -49,8 +66,8 @@ export default function BMWCarRental() {
       style={{ backgroundImage: "url('https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}>
         <h1 className="text-white text-4xl md:text-5xl font-bold">Vehicle Fleet</h1>
       </section>
-    <div className="max-w-7xl mx-auto !p-6 font-sans !mt-10 !ml-70">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-7xl !mx-auto !px-4 sm:!px-6 lg:!px-8 !mt-10 !mb-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
         {/* Left side: Image + Details */}
         <div>
           <img src={selectedImage} alt="Selected" className="w-full h-96 object-cover shadow" />
@@ -96,8 +113,8 @@ export default function BMWCarRental() {
         </div>
 
         {/* Right side: Booking Form */}
-        <div className="bg-white !p-6 rounded-lg shadow-md sticky top-10">
-          <div className="!mb-4 bg-gray-100 justify-between text-center !ml-40 !pt-5 w-50 h-30">
+        <div className="bg-white !p-6 rounded-lg shadow-md w-full max-w-md lg:sticky lg:top-10">
+          <div className="!mb-4 bg-gray-100 justify-between text-center !ml-20 !pt-5 w-50 h-30">
             <p className="text-gray-600 text-sm">Daily rate</p>
             <p className="text-4xl font-bold text-blue-900">₹2500</p>
           </div>
@@ -127,10 +144,10 @@ export default function BMWCarRental() {
             <div className="flex gap-2">
               <Input value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} />
               <Select defaultValue="Time" className="w-1/2">
-                <Option>9:00 AM</Option>
-                <Option>12:00 PM</Option>
-                <Option>3:00 PM</Option>
-                <Option>6:00 PM</Option>
+              <Option key="pickup-9">9:00 AM</Option>
+                <Option key="pickup-12">12:00 PM</Option>
+                <Option key="pickup-15">3:00 PM</Option>
+                <Option key="pickup-18">6:00 PM</Option>
               </Select>
             </div>
           </div>
@@ -140,10 +157,10 @@ export default function BMWCarRental() {
             <div className="flex gap-2">
               <Input value={returnDate} onChange={(e) => setReturnDate(e.target.value)} />
               <Select defaultValue="Time" className="w-1/2">
-                <Option>9:00 AM</Option>
-                <Option>12:00 PM</Option>
-                <Option>3:00 PM</Option>
-                <Option>6:00 PM</Option>
+              <Option key="pickup-9">9:00 AM</Option>
+                <Option key="pickup-12">12:00 PM</Option>
+                <Option key="pickup-15">3:00 PM</Option>
+                <Option key="pickup-18">6:00 PM</Option>
               </Select>
             </div>
           </div>
