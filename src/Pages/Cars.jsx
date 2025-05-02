@@ -160,63 +160,66 @@ const Cars = () => {
   }, []);
 
   return (
-    <div>
-      <Header />
-      {/* Hero Banner with background image */}
-      <section
-        className="h-85 bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg')" }}
-      >
-        <h1 className="text-white text-4xl md:text-5xl font-bold">Cars</h1>
-      </section>
+  <div>
+    <Header />
+    <section
+    className="min-h-[50vh] bg-cover bg-center flex items-center justify-center"
+    style={{ backgroundImage: "url('https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg')" }}>
+    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold text-center">Cars</h1>
+    </section>
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 !px-4 sm:!px-8 !py-10">
+      {carData.map((car, index) => (
+        <div
+        key={car.id}
+        className="shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105 bg-white flex flex-col"
+        data-aos="fade-up"
+        data-aos-delay={`${index * 100}`}>
+        <img
+          src={car.image}
+          alt={car.name}
+          className="rounded-t-lg h-48 sm:h-56 w-full object-cover"/>
+        <div className="!p-4 flex flex-col justify-between h-full">
+          <div>
+            <h1 className="text-lg sm:text-xl font-semibold">{car.name}</h1>
+            <p className="text-blue-500 text-base sm:text-lg !mt-1">
+              ₹{car.price}<span className="text-gray-500 text-sm">/day</span>
+            </p>
 
-      <div className='grid sm:grid-cols-2 md:grid-cols-4 !p-10'>
-        {carData.map((car, index) => (
-          <div
-            key={car.id}
-            className='card shadow-lg rounded-lg transform transition-all duration-300 hover:scale-105 h-120 w-100 !mb-10' 
-            data-aos="fade-up"
-            data-aos-delay={`${index * 100}`}
-          >
-            <div className='card-body !p-4'>
-              <img src={car.image} alt={car.name} className='rounded-lg h-60 w-full object-cover' />
-              <div className='!p-3'>
-                <h1 className='text-xl font-semibold'>{car.name}</h1>
-                <p className='text-blue-500 text-lg !mt-1'>
-                ₹{car.price}<span className='text-gray-500 text-sm'>/day</span>
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 !mt-4">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Users size={20} />
-                    <span>{car.seats}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Fuel size={20} />
-                    <span>{car.fuel}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Calendar size={20} />
-                    <span>{car.year}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Car size={20} />
-                    <span>{car.transmission}</span>
-                  </div>
-                </div>
-
-                <NavLink to={car.buttonLink || `/car/${car.id}`}>
-                  <Button type='primary' className="w-full !mt-6 text-white font-semibold !py-2 rounded-lg">
-                    {car.buttonLabel || "Rent Now"}
-                  </Button>
-                </NavLink>
-
+            <div className="grid grid-cols-2 gap-3 !mt-4 text-sm sm:text-base text-gray-600">
+              <div className="flex items-center gap-2">
+                <Users size={18} />
+                <span>{car.seats}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Fuel size={18} />
+                <span>{car.fuel}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar size={18} />
+                <span>{car.year}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Car size={18} />
+                <span>{car.transmission}</span>
               </div>
             </div>
           </div>
-        ))}
+
+          <NavLink to={car.buttonLink || `/car/${car.id}`} className="!mt-6">
+            <Button
+              type="primary"
+              className="w-full text-white font-semibold !py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-all duration-300"
+            >
+              {car.buttonLabel || "Rent Now"}
+            </Button>
+          </NavLink>
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
   );
 };
 
