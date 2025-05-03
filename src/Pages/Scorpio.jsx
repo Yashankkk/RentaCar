@@ -46,7 +46,7 @@ export default function BMWCarRental() {
       dropoffLocation,
       pickupDate,
       returnDate,
-      carModel: 'Scorpio N 2024',
+      carModel: 'Scorpio N',
       pricePerDay: 3500,
     };
     try{

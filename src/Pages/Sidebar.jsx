@@ -3,7 +3,8 @@ import car from '../assets/carr.png'
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Dashboard from './Dashboard';
-import User from "../Components/User.jsx";
+import User from "../Components/Userprofile.jsx";
+import Review from "./Review.jsx";
 
 import {
   PieChartOutlined,
@@ -217,7 +218,7 @@ const Sidebar = () => {
             {currentPath === "Dashboard" && <Dashboard />}
             {currentPath === "My Profile" && <User /> }
             {currentPath === "Bookings" &&<p>Booking details go here...</p> }
-            {currentPath === "Review" && <p>Review content go here...</p> }
+            {currentPath === "Review" && <Review /> }
             {currentPath === "Report" && <p>Report details go here...</p> }
             {currentPath === "Terms&Policy" && <p>Terms and Policy information...</p> }
           </div>

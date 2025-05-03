@@ -5,6 +5,7 @@ import { Button } from "antd";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 // Sample car data
 const carData = [
@@ -18,7 +19,7 @@ const carData = [
     year: "2024",
     transmission: "Automatic",
     buttonLabel: "Rent Now",
-    buttonLink: "/scorpio",
+    buttonLink: "/cars/scorpio",
   },
   {
     id: 2,
@@ -30,7 +31,7 @@ const carData = [
     year: "2023",
     transmission: "Manual",
     buttonLabel: "Rent Now",
-    buttonLink: "/creta",
+    buttonLink: "/cars/creta",
   },
   {
     id: 3,
@@ -42,7 +43,7 @@ const carData = [
     year: "2024",
     transmission: "Automatic",
     buttonLabel: "Rent Now",
-    buttonLink: "/harrier",
+    buttonLink: "/cars/harrier",
   },
   {
     id: 4,
@@ -54,7 +55,7 @@ const carData = [
     year: "2024",
     transmission: "Manual",
     buttonLabel: "Rent Now",
-    buttonLink: "/alto",
+    buttonLink: "/cars/alto",
   },
   {
     id: 5,
@@ -66,7 +67,7 @@ const carData = [
     year: "2024",
     transmission: "Automatic",
     buttonLabel: "Rent Now",
-    buttonLink: "/virtus",
+    buttonLink: "/cars/virtus",
   },
   {
     id: 6,
@@ -78,7 +79,7 @@ const carData = [
     year: "2024",
     transmission: "Automatic",
     buttonLabel: "Rent Now",
-    buttonLink: "/verna",
+    buttonLink: "/cars/verna",
   },
   {
     id: 7,
@@ -90,7 +91,7 @@ const carData = [
     year: "2022",
     transmission: "Manual",
     buttonLabel: "Rent Now",
-    buttonLink: "/brezza",
+    buttonLink: "/cars/brezza",
   },
   {
     id: 8,
@@ -102,7 +103,7 @@ const carData = [
     year: "2020",
     transmission: "Manual",
     buttonLabel: "Rent Now",
-    buttonLink: "/polo",
+    buttonLink: "/cars/polo",
   },
   {
     id: 9,
@@ -114,7 +115,7 @@ const carData = [
     year: "2023",
     transmission: "Manual",
     buttonLabel: "Rent Now",
-    buttonLink: "/ertiga",
+    buttonLink: "/cars/ertiga",
   },
   {
     id: 10,
@@ -126,7 +127,7 @@ const carData = [
     year: "2024",
     transmission: "Automatic",
     buttonLabel: "Rent Now",
-    buttonLink: "/vitara",
+    buttonLink: "/cars/vitara",
   },
   {
     id: 11,
@@ -138,7 +139,7 @@ const carData = [
     year: "2024",
     transmission: "Automatic",
     buttonLabel: "Rent Now",
-    buttonLink: "/nexon",
+    buttonLink: "/cars/nexon",
   },
   {
     id: 12,
@@ -150,7 +151,7 @@ const carData = [
     year: "2024",
     transmission: "Automatic",
     buttonLabel: "Rent Now",
-    buttonLink: "/thar",
+    buttonLink: "/cars/thar",
   },
 ];
 
@@ -218,6 +219,7 @@ const Cars = () => {
       </div>
     ))}
   </div>
+  <Footer />
 </div>
 
   );

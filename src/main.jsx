@@ -15,7 +15,7 @@ import Forgotpassword from './Pages/Forgotpassword.jsx';
 // import GoogleLogin from './Pages/Googlelogin.jsx';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import Dashboard from './Pages/Dashboard.jsx';
-import User from './Components/User.jsx';
+import User from './Components/Userprofile.jsx';
 import Cars from './Pages/Cars.jsx';
 import Booking from './Components/Booking.jsx';
 import Creta from './Pages/Creta.jsx';
@@ -30,6 +30,7 @@ import Ertiga from './Pages/Ertiga.jsx';
 import Vitara from './Pages/Vitara.jsx';
 import Nexon from './Pages/Nexon.jsx';
 import Thar from './Pages/Thar.jsx';
+import Review from './Pages/Review.jsx';
 
 // const GoogleWrapper = () => {
 //   return(
@@ -57,18 +58,19 @@ createRoot(document.getElementById('root')).render(
       <Route path="/user" element={<User/>} />
       <Route path="/cars" element={<Cars/>} />
       <Route path="/book" element={<Booking/>} />
-      <Route path="/creta" element={<Creta/>} />
-      <Route path="/scorpio" element={<Scorpio/>} />
-      <Route path="/harrier" element={<Harrier/>} />
-      <Route path="/alto" element={<Alto/>} />
-      <Route path="/virtus" element={<Virtus />} />
-      <Route path="/verna" element={<Verna />} />
-      <Route path="/brezza" element={<Brezza />} />
-      <Route path="/polo" element={<Polo />} />
-      <Route path="/ertiga" element={<Ertiga />} />
-      <Route path="/vitara" element={<Vitara />} />
-      <Route path="/nexon" element={<Nexon />} />
-      <Route path="/thar" element={<Thar />} />
+      <Route path="/cars/creta" element={<Creta/>} />
+      <Route path="/cars/scorpio" element={<Scorpio/>} />
+      <Route path="/cars/harrier" element={<Harrier/>} />
+      <Route path="/cars/alto" element={<Alto/>} />
+      <Route path="/cars/virtus" element={<Virtus />} />
+      <Route path="/cars/verna" element={<Verna />} />
+      <Route path="/cars/brezza" element={<Brezza />} />
+      <Route path="/cars/polo" element={<Polo />} />
+      <Route path="/cars/ertiga" element={<Ertiga />} />
+      <Route path="/cars/vitara" element={<Vitara />} />
+      <Route path="/cars/nexon" element={<Nexon />} />
+      <Route path="/cars/thar" element={<Thar />} />
+      <Route path="/sidebar/review" element={<Review />} />
     </Routes>
     {/* <Footer /> */}
     </BrowserRouter>

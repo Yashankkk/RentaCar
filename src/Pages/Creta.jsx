@@ -45,7 +45,7 @@ export default function BMWCarRental() {
       dropoffLocation,
       pickupDate,
       returnDate,
-      carModel: 'Hyundai Creta 2024',
+      carModel: 'Hyundai Creta',
       pricePerDay: 3000,
     };
     try{
