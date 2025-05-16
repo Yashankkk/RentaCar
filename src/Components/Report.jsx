@@ -17,11 +17,44 @@ const { TextArea } = Input;
 const UserReportForm = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values) => {
-    console.log('Report Submitted:', values);
-    message.success('Your report has been submitted successfully!');
-    form.resetFields();
-  };
+ const onFinish = async (values) => {
+  console.log('submit clicked');
+  const formData = new FormData();
+  formData.append('issueType', values.issueType);
+  formData.append('subject', values.subject);
+  formData.append('description', values.description);
+  if (values.bookingId) formData.append('bookingId', values.bookingId);
+  if (values.issueDate) formData.append('issueDate', values.issueDate.toISOString());
+
+  // Append files
+  if (values.upload && values.upload.fileList) {
+    values.upload.fileList.forEach(file => {
+      formData.append('files', file.originFileObj);
+    });
+  }
+
+  try {
+    const response = await fetch('http://localhost:3000/api/report/submit-report', {
+      method: 'POST',
+      body: formData
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      message.success(result.message || 'Report submitted successfully!');
+      alert('Report submitted successfully!'); // ✅ Native alert
+      form.resetFields();
+    } else {
+      message.error(result.message || 'Failed to submit report');
+      alert('Failed to submit report'); // ✅ Native alert
+    }
+  } catch (error) {
+    console.error('Submit error:', error);
+    message.error('Error submitting report');
+    alert('Error submitting report'); // ✅ Native alert
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-cover bg-center flex items-center justify-center !px-4"
