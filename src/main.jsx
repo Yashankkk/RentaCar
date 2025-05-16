@@ -31,6 +31,8 @@ import Vitara from './Pages/Vitara.jsx';
 import Nexon from './Pages/Nexon.jsx';
 import Thar from './Pages/Thar.jsx';
 import Review from './Pages/Review.jsx';
+import Terms from './Components/Terms.jsx';
+import Report from "./Components/Report.jsx"
 
 // const GoogleWrapper = () => {
 //   return(
@@ -71,6 +73,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="/cars/nexon" element={<Nexon />} />
       <Route path="/cars/thar" element={<Thar />} />
       <Route path="/sidebar/review" element={<Review />} />
+      <Route path="/sidebar/terms" element={<Terms />} />
+      <Route path="/sidebar/report" element={<Report />} />
     </Routes>
     {/* <Footer /> */}
     </BrowserRouter>
