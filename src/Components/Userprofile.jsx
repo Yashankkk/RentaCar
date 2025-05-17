@@ -6,7 +6,7 @@ const Profile = () => {
   const [user, setUser] = useState({});
   const [editing, setEditing] = useState(false);
   const [form] = Form.useForm();
-
+const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
     setUser(storedUser);
@@ -25,9 +25,8 @@ const Profile = () => {
     try {
       const updatedData = await form.validateFields();
       const updatedUser = { ...user, ...updatedData };
-
-      await axios.put(`http://localhost:3000/api/auth/adminupdate/${user._id}`, updatedUser);
-      setUser(updatedUser);
+await axios.put(`${BASE_URL}/api/auth/adminupdate/${user._id}`, updatedUser);
+setUser(updatedUser);
       localStorage.setItem('user', JSON.stringify(updatedUser));
       setEditing(false);
       message.success('Profile updated successfully!');
