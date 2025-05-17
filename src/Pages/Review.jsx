@@ -3,7 +3,7 @@ import { Rate, Upload, Button, Input } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
 const { TextArea } = Input;
-
+const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
 const Review = () => {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState('');
@@ -40,10 +40,10 @@ const handleSubmit = async () => {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/api/review", {
-      method: "POST",
-      body: formData,
-    });
+   const response = await fetch(`${BASE_URL}/api/review`, {
+  method: "POST",
+  body: formData,
+});
 
     const result = await response.json();
 

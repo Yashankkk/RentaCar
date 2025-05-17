@@ -6,13 +6,14 @@ import axios from "axios";
 
 const GoolgeLogin = () => {
   const navigate = useNavigate();
+  const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
   const responseGoogle = async (authResult) => {
     console.log("yeh tha code frontend sa", authResult);
 
     try {
       if (authResult.code) {
    await axios
-          .post(`http://localhost:3000/auth/google?code=${authResult.code}`)
+.post(`${BASE_URL}/auth/google?code=${authResult.code}`)
           .then((res) => {
             console.log("yeh ha res from backend", res);
             const { email, name, image } = res.data.user;
