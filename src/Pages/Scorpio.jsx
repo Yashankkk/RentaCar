@@ -6,7 +6,7 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 
 const { Option } = Select;
-
+const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
 export default function BMWCarRental() {
   const [pickupLocation, setPickupLocation] = useState('');
   const [dropoffLocation, setDropoffLocation] = useState('');
@@ -50,7 +50,7 @@ export default function BMWCarRental() {
       pricePerDay: 3500,
     };
     try{
-      const response = await axios.post(`http://localhost:3000/api/auth/bookings`, bookingData);
+const response = await axios.post(`${BASE_URL}/api/auth/bookings`, bookingData);
       console.log('Booking Successfull:', response.data);
       return alert('Booking successful!');
 

@@ -1,14 +1,14 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: "http://localhost:3000",
+   baseURL: import.meta.env.VITE_PROD_BASE_URL || "http://localhost:3000",
     timeout: 1000,
 });
 
 instance.interceptors.request.use(async (config) => {
     try{
         const token =localStorage.getItem('token')
-        console.log(token)
+        console.log(token)` `
         if (!token) {
             throw new Error("Token not found");
         }

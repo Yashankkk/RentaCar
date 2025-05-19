@@ -8,14 +8,14 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 
 const { TextArea } = Input; 
-
+const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
 const Contact = () => {
   const [form] = Form.useForm();
   const [data, setData] = useState(null);
 
   const onFinish = async (values) => {
     try {
-      const response = await axios.post(`http://localhost:3000/api/auth/contact`, values);
+  const response = await axios.post(`${BASE_URL}/api/auth/contact`, values);
       console.log("Message sent Successfully!", response.data);
       setData(response.data);
     } catch (error) {
