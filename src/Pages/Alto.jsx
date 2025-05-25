@@ -38,7 +38,7 @@ export default function BMWCarRental() {
   ];
 
   const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', '2 Airbag' ];
-const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
+  const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
 
   const handleBookNow = async () => {
     const bookingData = {
