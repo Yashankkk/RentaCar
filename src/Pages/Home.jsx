@@ -146,7 +146,7 @@ const Home = () => {
                 </div>
               </div>
               <br />
-              <NavLink to="/scorpio">
+              <NavLink to="/cars/scorpio">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
@@ -179,7 +179,7 @@ const Home = () => {
                 </div>
               </div>
               <br />
-              <NavLink to="/alto">
+              <NavLink to="/cars/alto">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>
@@ -212,7 +212,7 @@ const Home = () => {
                 </div>
               </div>
               <br />
-              <NavLink to="/virtus">
+              <NavLink to="/cars/virtus">
                 <Button type='primary' className="w-full hover:bg-blue-700 text-white font-semibold !py-2 rounded-lg">
                 Rent Now
                 </Button>

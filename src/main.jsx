@@ -32,16 +32,10 @@ import Nexon from './Pages/Nexon.jsx';
 import Thar from './Pages/Thar.jsx';
 import Review from './Pages/Review.jsx';
 import Terms from './Components/Terms.jsx';
-import Report from "./Components/Report.jsx"
+import Report from "./Components/Report.jsx";
+import CarNews from "./Components/CarNews.jsx";
+import News from "./Components/News.jsx";
 
-// const GoogleWrapper = () => {
-//   return(
-//     <GoogleOAuthProvider clientId="371112211861-lb7qs932qqpuf7mf759rvp9oc5spf6f4.apps.googleusercontent.com">
-//     <Login />
-//   </GoogleOAuthProvider>
-//   )
- 
-// }
 
 createRoot(document.getElementById('root')).render(
   <div>
@@ -75,6 +69,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="/sidebar/review" element={<Review />} />
       <Route path="/sidebar/terms" element={<Terms />} />
       <Route path="/sidebar/report" element={<Report />} />
+      <Route path="/carnews" element={<CarNews />} />
+      <Route path="/news" element={<News />} />
     </Routes>
     {/* <Footer /> */}
     </BrowserRouter>

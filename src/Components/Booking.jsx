@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, DatePicker, TimePicker, Button, Row, Col, message } from 'antd';
 import { NavLink } from 'react-router-dom';
-// import dayjs from 'dayjs';
 
 const vehicleTypes = ['Car', 'Van', 'Scooter', 'Bike'];
 
@@ -19,7 +18,6 @@ const VehicleForm = () => {
       returnTime: values.returnTime.format('HH:mm'),
     };
     console.log(data);
-    // message.success('Vehicle search submitted!');
   };
 
   return (
