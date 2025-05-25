@@ -9,7 +9,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 // import { googleAuth } from "./api";
 import { useNavigate } from "react-router";
 import Header from '../Components/Header';
-import { baseURL } from '../../config';
+// import { baseURL } from '../../config';
 
 const Login = () => {
   const [data,setData]=useState()
@@ -19,7 +19,7 @@ const Login = () => {
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try {
-      const res = await axios.post(`${baseURL}/api/auth/login`, values);
+      const res = await axios.post(`http://localhost:3000/api/auth/login`, values);
       console.log("Login Successfull:", res.data);
       setData(res.data);
   

@@ -38,7 +38,7 @@ export default function BMWCarRental() {
   ];
 
   const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', '2 Airbag' ];
-const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
+// const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
   const handleBookNow = async () => {
     const bookingData = {
       pickupLocation,
@@ -49,7 +49,7 @@ const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
       pricePerDay: 1800,
     };
     try{
-const response = await axios.post(`${BASE_URL}/api/auth/bookings`, bookingData);
+const response = await axios.post(`http://localhost:3000/api/auth/bookings`, bookingData);
       console.log('Booking Successfull:', response.data);
       return alert('Booking successful!');
   

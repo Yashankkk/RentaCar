@@ -17,7 +17,7 @@ const Registration = () => {
   const [data,setData]=useState()
   console.log("yeh ha mera data",data?.message)
   // const notify = () => toast.info(data?.message);
-const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
+// const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
   const notify = (msg) => toast.info(msg);
   
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try{
-await axios.post(`${BASE_URL}/api/auth/registration`, values)
+await axios.post(`http://localhost:3000/api/auth/registration`, values)
       .then((response)=>{
         console.log("Registration Successfull:", response.data);
         setData(response.data)
@@ -35,7 +35,8 @@ await axios.post(`${BASE_URL}/api/auth/registration`, values)
       
       const otp = Math.floor(100000 + Math.random() * 900000);
       setGeneratedOtp(otp);
-await axios.post(`${BASE_URL}/api/auth/otp`, {
+      
+      await axios.post(`http://localhost:3000/api/auth/otp`, {
   email: values.email,
   otp: otp,
 });

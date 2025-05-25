@@ -13,7 +13,7 @@ export default function BMWCarRental() {
   const [pickupDate, setPickupDate] = useState('May 01, 2025');
   const [returnDate, setReturnDate] = useState('May 01, 2025');
   const [selectedImage, setSelectedImage] = useState('https://imgd.aeplcdn.com/664x374/n/cw/ec/144681/virtus-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80');
-const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
+// const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
   const carImages = [
     'https://imgd.aeplcdn.com/664x374/n/cw/ec/144681/virtus-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80',
     'https://imgd.aeplcdn.com/664x374/n/cw/ec/144681/virtus-exterior-right-side-view-5.jpeg?isig=0&q=80',
@@ -49,7 +49,7 @@ const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
       pricePerDay: 2700,
     };
     try{
-const response = await axios.post(`${BASE_URL}/api/auth/bookings`, bookingData);
+const response = await axios.post(`http://localhost:3000/api/auth/bookings`, bookingData);
       console.log('Booking Successfull:', response.data);
       return alert('Booking successful!');
   

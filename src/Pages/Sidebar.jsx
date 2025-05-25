@@ -5,8 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import User from "../Components/Userprofile.jsx";
 import Review from "./Review.jsx";
-import Terms from "../Components/Terms.jsx"
-import Report from "../Components/Report.jsx"
+import Terms from "../Components/Terms.jsx";
+import Report from "../Components/Report.jsx";
+import Cars from "../Pages/Cars.jsx";
 
 import {
   PieChartOutlined,
@@ -48,7 +49,7 @@ const Dashitems = [
   getItem("Dashboard", "Dashboard", <PieChartOutlined />),
   getItem("My Profile", "My Profile", <UserOutlined />),
   getItem("Bookings", "Bookings", <SolutionOutlined />),
-  getItem("Exampapers", "Exampapers", <FileOutlined />),
+  getItem("Cars", "Cars", <FileOutlined />),
   
   // getItem("Quiz", "Quiz", <FormOutlined />),
   getItem("Review", "Review", <MessageOutlined />),
@@ -220,6 +221,7 @@ const Sidebar = () => {
             {currentPath === "Dashboard" && <Dashboard />}
             {currentPath === "My Profile" && <User /> }
             {currentPath === "Bookings" &&<p>Booking details go here...</p> }
+            {currentPath === "Cars" && <Cars /> }
             {currentPath === "Review" && <Review /> }
             {currentPath === "Report" && <Report /> }
             {currentPath === "Terms&Conditions" && <Terms /> }

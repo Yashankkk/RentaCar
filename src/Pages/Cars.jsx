@@ -4,8 +4,8 @@ import { Car, Fuel, Users, Calendar } from 'lucide-react';
 import { Button } from "antd";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+// import Header from '../Components/Header';
+// import Footer from '../Components/Footer';
 
 // Sample car data
 const carData = [
