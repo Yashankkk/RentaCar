@@ -35,6 +35,8 @@ import Terms from './Components/Terms.jsx';
 import Report from "./Components/Report.jsx";
 import CarNews from "./Components/CarNews.jsx";
 import News from "./Components/News.jsx";
+import Feedback from "./Pages/Feedback.jsx";
+import Help from "./Pages/Help.jsx";
 
 
 createRoot(document.getElementById('root')).render(
@@ -71,6 +73,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="/sidebar/report" element={<Report />} />
       <Route path="/carnews" element={<CarNews />} />
       <Route path="/news" element={<News />} />
+      <Route path="/feedback" element={<Feedback />} />
+      <Route path="/help" element={<Help />} />
     </Routes>
     {/* <Footer /> */}
     </BrowserRouter>

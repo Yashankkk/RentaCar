@@ -18,16 +18,16 @@ const Contact = () => {
   const response = await axios.post(`http://localhost:3000/api/auth/contact`, values);
       console.log("Message sent Successfully!", response.data);
       setData(response.data);
+      return alert("Message sent Successfully!");
     } catch (error) {
       console.error("Message failed to deliver", error);
+      return alert("Message failed to deliver");
     }
   };
 
   return (
     <div>
       <Header />
-
-      {/* Hero Banner with background image */}
       <section
         className="h-85 bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('https://images.pexels.com/photos/4090350/pexels-photo-4090350.jpeg')" }}
@@ -35,23 +35,22 @@ const Contact = () => {
         <h1 className="text-white text-4xl md:text-5xl font-bold">Contact</h1>
       </section>
 
-      {/* Contact Form Section */}
       <div className="!mt-5 !mb-20 !px-6">
-  <h1 className="text-black text-center text-4xl md:text-5xl">Get in Touch</h1>
-  <br />
-  <Row gutter={[32, 32]}>
-    {/* Contact Form Column */}
-    <Col xs={24} md={16}>
-      <Typography.Title level={3}>Drop Us a Line</Typography.Title>
-      <p className="text-gray-700">
-        Feel free to connect with us through our online channels for updates, news, and more.
-      </p>
-
-      {data?.message && (
-        <div className="bg-green-100 text-green-800 !p-3 rounded !mt-4">
+        <h1 className="text-black text-center text-4xl md:text-5xl">Get in Touch</h1>
+        <br />
+        <Row gutter={[32, 32]}>
+          
+          <Col xs={24} md={16}>
+          <Typography.Title level={3}>Drop Us a Line</Typography.Title>
+          <p className="text-gray-700">
+            Feel free to connect with us through our online channels for updates, news, and more.
+          </p>
+          
+          {data?.message && (
+            <div className="bg-green-100 text-green-800 !p-3 rounded !mt-4">
           {data.message}
-        </div>
-      )}
+      </div>
+    )}
 
       <Form
         form={form}

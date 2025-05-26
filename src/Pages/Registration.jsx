@@ -25,11 +25,11 @@ const Registration = () => {
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     try{
-await axios.post(`http://localhost:3000/api/auth/registration`, values)
+      await axios.post(`http://localhost:3000/api/auth/registration`, values)
       .then((response)=>{
         console.log("Registration Successfull:", response.data);
         setData(response.data)
-        notify("User Registered Successfully")
+        return alert("User Registered Successfully")
         // navigate("/");
       })
       
@@ -37,13 +37,13 @@ await axios.post(`http://localhost:3000/api/auth/registration`, values)
       setGeneratedOtp(otp);
       
       await axios.post(`http://localhost:3000/api/auth/otp`, {
-  email: values.email,
-  otp: otp,
-});
+        email: values.email,
+        otp: otp,
+      });
       setIsModalVisible(true);
     } catch (error) {
       console.error("Registration Failed:", error.response?.data || error.message);
-      notify("Registration Failed");
+      return alert("Registration Failed");
     }
   };
 

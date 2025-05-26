@@ -7,7 +7,8 @@ import User from "../Components/Userprofile.jsx";
 import Review from "./Review.jsx";
 import Terms from "../Components/Terms.jsx";
 import Report from "../Components/Report.jsx";
-import Cars from "../Pages/Cars.jsx";
+// import Cars from "../Pages/Cars.jsx";
+import Help from "./Help.jsx";
 
 import {
   PieChartOutlined,
@@ -16,8 +17,7 @@ import {
   MenuUnfoldOutlined,
   DownOutlined,
   HomeTwoTone,
-  SolutionOutlined,
-  FileOutlined,
+  QuestionCircleOutlined,
   LockOutlined,
   BlockOutlined,
   FormOutlined,
@@ -48,8 +48,8 @@ function getItem(label, key, icon, children) {
 const Dashitems = [
   getItem("Dashboard", "Dashboard", <PieChartOutlined />),
   getItem("My Profile", "My Profile", <UserOutlined />),
-  getItem("Bookings", "Bookings", <SolutionOutlined />),
-  getItem("Cars", "Cars", <FileOutlined />),
+  // getItem("Bookings", "Bookings", <SolutionOutlined />),
+  getItem("Help Center", "Help Center", <QuestionCircleOutlined />),
   
   // getItem("Quiz", "Quiz", <FormOutlined />),
   getItem("Review", "Review", <MessageOutlined />),
@@ -220,8 +220,8 @@ const Sidebar = () => {
           >
             {currentPath === "Dashboard" && <Dashboard />}
             {currentPath === "My Profile" && <User /> }
-            {currentPath === "Bookings" &&<p>Booking details go here...</p> }
-            {currentPath === "Cars" && <Cars /> }
+            {/* {currentPath === "Bookings" &&<p>Booking details go here...</p> } */}
+            {currentPath === "Help Center" && <Help/> }
             {currentPath === "Review" && <Review /> }
             {currentPath === "Report" && <Report /> }
             {currentPath === "Terms&Conditions" && <Terms /> }

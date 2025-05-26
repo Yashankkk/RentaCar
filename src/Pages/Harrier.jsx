@@ -7,7 +7,8 @@ import Footer from '../Components/Footer';
 
 const { Option } = Select;
 // const BASE_URL = import.meta.env.VITE_PROD_BASE_URL;
-export default function BMWCarRental() {
+export default function CarRental() {
+  const [email, setEmail] = useState('');
   const [pickupLocation, setPickupLocation] = useState('');
   const [dropoffLocation, setDropoffLocation] = useState('');
   const [pickupDate, setPickupDate] = useState('May 01, 2025');
@@ -40,7 +41,12 @@ export default function BMWCarRental() {
   const features = ['Bluetooth', 'Multimedia Player', 'Central Lock', 'Moonroof'];
 
   const handleBookNow = async () => {
+    if (!pickupLocation || !dropoffLocation || !email) {
+      return message.error('Please fill in all required fields including email.');
+    }
+
     const bookingData = {
+      email,
       pickupLocation,
       dropoffLocation,
       pickupDate,
@@ -120,6 +126,16 @@ const response = await axios.post(`http://localhost:3000/api/auth/bookings`, boo
           </div>
 
           <h2 className="text-xl font-bold !mb-4">Booking this car</h2>
+
+          <div className="!mb-4">
+            <label className="block !mb-1 text-gray-700">Email Address</label>
+            <Input
+              placeholder="Enter your email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+             />
+          </div>
 
           <div className="!mb-4">
             <label className="block !mb-1 text-gray-700">Pick Up Location</label>

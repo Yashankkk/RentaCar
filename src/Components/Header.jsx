@@ -9,6 +9,7 @@ import {
   UserAddOutlined,
   InfoCircleOutlined,
   FileSearchOutlined,
+  StarOutlined, 
 } from "@ant-design/icons";
 import "@fontsource/poppins";
 import car from "../assets/carr.png";
@@ -68,6 +69,11 @@ const Header = () => {
               <CarOutlined /> Cars
             </p>
           </NavLink>
+          {/* <NavLink to="/feedback">
+            <p className="hover:scale-105 cursor-pointer">
+              <StarOutlined /> Reviews
+            </p>
+          </NavLink> */}
           <NavLink to="/contact">
             <p className="hover:scale-105 cursor-pointer">
               <PhoneOutlined /> Contact
